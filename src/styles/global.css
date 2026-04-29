@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Oswald:wght@300;400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -6,23 +6,34 @@
   padding: 0;
 }
 
+/* ══════════════════════════════════════════
+   DESIGN TOKENS
+   ══════════════════════════════════════════ */
 :root {
-  --bg:        #1a0000;
-  --bg2:       #2a0505;
-  --card-bg:   #1f0404;
-  --gold:      #c8a84b;
-  --gold-lt:   #e0c070;
-  --red:       #8b0000;
-  --red-lt:    #b00000;
-  --text:      #e8e0d0;
-  --muted:     #a09080;
-  --border:    #3a1010;
-  --white:     #ffffff;
+  --bg:          #1a0000;
+  --bg2:         #2a0505;
+  --card-bg:     #1f0404;
+  --gold:        #c8a84b;
+  --gold-lt:     #e0c070;
+  --gold-dim:    rgba(200, 168, 75, 0.12);
+  --gold-border: rgba(200, 168, 75, 0.35);
+  --red:         #8b0000;
+  --red-lt:      #b00000;
+  --text:        #e8e0d0;
+  --muted:       #a09080;
+  --border:      #3a1010;
+  --white:       #ffffff;
+
+  /* Unified timing — use these everywhere */
+  --t-fast: 0.18s ease;
+  --t-mid:  0.28s ease;
+  --t-slow: 0.45s ease;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* ══════════════════════════════════════════
+   BASE
+   ══════════════════════════════════════════ */
+html { scroll-behavior: smooth; }
 
 body {
   background-image: url("../assets/BgImg.jpg");
@@ -36,73 +47,185 @@ body {
   overflow-x: hidden;
 }
 
-/* ── SHARED UTILITY ── */
+/* ══════════════════════════════════════════
+   KEYFRAMES  (defined once, used everywhere)
+   ══════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0);     }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+@keyframes lineExpand {
+  from { width: 0; opacity: 0; }
+  to   { width: 60px; opacity: 1; }
+}
+@keyframes goldShimmer {
+  0%   { background-position:  200% center; }
+  100% { background-position: -200% center; }
+}
+@keyframes sweepFill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ══════════════════════════════════════════
+   PAGE HERO  (used by every page)
+   ══════════════════════════════════════════ */
 .page-hero {
-  padding: 48px 32px 32px;
+  padding: 52px 32px 32px;
   text-align: center;
+  animation: fadeUp 0.55s ease both;
 }
 
 .page-hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.8rem, 8vw, 5.5rem);
-  color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   line-height: 1;
+  /* Shimmering gold gradient on all page titles */
+  background: linear-gradient(
+    90deg,
+    var(--gold)    0%,
+    var(--gold-lt) 35%,
+    #fff7d6        50%,
+    var(--gold-lt) 65%,
+    var(--gold)    100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldShimmer 5s linear infinite;
 }
 
 .page-hero h1.large-title {
-  font-size: clamp(3rem, 10vw, 6.5rem);
+  font-size: clamp(3rem, 10vw, 6rem);
   letter-spacing: -0.01em;
 }
 
+/* ── HERO ACCENT LINE ── */
+.hero-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto;
+  animation: lineExpand 0.6s ease 0.3s both;
+}
+
+/* ══════════════════════════════════════════
+   DIVIDER
+   ══════════════════════════════════════════ */
 .divider {
   height: 1px;
-  background: var(--border);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--border) 20%,
+    var(--border) 80%,
+    transparent 100%
+  );
   margin: 0 32px;
 }
 
-.btn-gold {
+/* ══════════════════════════════════════════
+   BUTTONS
+   All three variants live here — not in
+   Home.css or anywhere else.
+   ══════════════════════════════════════════ */
+.btn-gold,
+.btn-dark,
+.btn-view {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.82rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    color      var(--t-fast),
+    background var(--t-fast),
+    box-shadow var(--t-fast),
+    transform  var(--t-fast);
+}
+
+/* Sweep-fill layer for .btn-gold and .btn-dark */
+.btn-gold::before,
+.btn-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-mid);
+  z-index: 0;
+}
+
+/* Gold outline */
+.btn-gold {
+  font-size: 0.82rem;
   padding: 14px 32px;
   background: transparent;
   border: 1px solid var(--gold);
   color: var(--gold);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
 }
-.btn-gold:hover { background: var(--gold); color: #0d0000; }
+.btn-gold::before { background: var(--gold); }
+.btn-gold:hover {
+  color: #0d0000;
+  box-shadow: 0 4px 20px rgba(200, 168, 75, 0.35);
+  transform: translateY(-1px);
+}
+.btn-gold:hover::before { transform: scaleX(1); }
 
+/* Neutral outline */
 .btn-dark {
-  font-family: 'Oswald', sans-serif;
   font-size: 0.82rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
   padding: 14px 32px;
   background: transparent;
   border: 1px solid var(--text);
   color: var(--text);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
 }
-.btn-dark:hover { background: var(--text); color: #0d0000; }
+.btn-dark::before { background: var(--text); }
+.btn-dark:hover {
+  color: #0d0000;
+  transform: translateY(-1px);
+}
+.btn-dark:hover::before { transform: scaleX(1); }
 
+/* Solid gold */
 .btn-view {
-  font-family: 'Oswald', sans-serif;
   font-size: 0.75rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
   padding: 10px 28px;
   background: var(--gold);
   color: #0d0000;
   border: none;
-  cursor: pointer;
-  transition: background 0.2s;
 }
-.btn-view:hover { background: var(--gold-lt); }
+.btn-view::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-mid);
+}
+.btn-view:hover {
+  background: var(--gold-lt);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(200, 168, 75, 0.4);
+}
+.btn-view:hover::after { transform: scaleX(1); }
 
 .btn-row {
   display: flex;
@@ -111,6 +234,9 @@ body {
   flex-wrap: wrap;
 }
 
+/* ══════════════════════════════════════════
+   BACK BUTTON
+   ══════════════════════════════════════════ */
 .back-btn {
   font-family: 'Oswald', sans-serif;
   font-size: 0.75rem;
@@ -120,15 +246,23 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  margin: 20px 32px;
-  display: flex;
+  margin: 24px 32px;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  transition: color 0.2s;
+  gap: 8px;
+  transition: color var(--t-fast), gap var(--t-fast);
 }
-.back-btn:hover { color: var(--gold-lt); }
+.back-btn:hover {
+  color: var(--gold-lt);
+  gap: 13px;
+}
 
-/* ── RESPONSIVE ── */
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
 @media (max-width: 680px) {
+  .page-hero { padding: 36px 24px 24px; }
   .page-hero h1 { font-size: clamp(2rem, 10vw, 4rem); }
+  .divider { margin: 0 16px; }
+  .back-btn { margin: 16px 20px; }
 }

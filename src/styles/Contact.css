@@ -1,79 +1,216 @@
+/* ══════════════════════════════════════════
+   CONTACT PAGE
+   NOTE: .page-hero, .hero-line, .divider
+   all come from global.css.
+   This file only adds contact-specific styles.
+   ══════════════════════════════════════════ */
+
+/* Hero ornament (✦ symbol above title) */
+.hero-ornament {
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: block;
+  animation: fadeIn 0.5s ease both;
+}
+
+/* .large-title modifier handled by global.css via
+   .page-hero h1.large-title — no override needed */
+
+/* ── CONTACT CARD ── */
 .contact-card {
-  max-width: 540px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 32px 64px;
   display: flex;
-  gap: 24px;
-  align-items: flex-start;
+  gap: 48px;
+  align-items: center;
+  background: transparent;
+  animation: fadeUp 0.6s ease 0.2s both;
 }
 
-.contact-photo-placeholder {
-  width: 110px;
-  height: 110px;
+/* ── PHOTO AREA ── */
+.contact-photo-area {
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--bg2), var(--red));
+  position: relative;
+}
+
+.photo-frame {
+  width: 220px;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--gold-border);
+  padding: 8px;
+  background: rgba(20, 8, 8, 0.6);
+  transition: border-color var(--t-mid), box-shadow var(--t-mid);
+}
+
+.photo-frame:hover {
+  border-color: rgba(200, 168, 75, 0.65);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 20px rgba(200, 168, 75, 0.1);
+}
+
+.contact-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: sepia(0.2) contrast(1.08) brightness(0.95);
+  transition: filter var(--t-slow), transform var(--t-slow);
+}
+
+.photo-frame:hover .contact-photo-img {
+  filter: sepia(0.05) contrast(1.05) brightness(1.02);
+  transform: scale(1.03);
+}
+
+/* Corner decoration bracket */
+.photo-decoration {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 40px;
+  height: 40px;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  opacity: 0.5;
+  transition: opacity var(--t-mid), bottom var(--t-mid), right var(--t-mid);
+}
+
+.contact-photo-area:hover .photo-decoration {
+  opacity: 0.9;
+  bottom: -16px;
+  right: -16px;
+}
+
+/* ── CONTACT INFO PANEL ── */
+.contact-info {
+  flex: 1;
+  background: rgba(20, 8, 8, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--gold-border);
+  padding: 32px 36px;
+  transition: border-color var(--t-mid), box-shadow var(--t-mid);
+  animation: slideInRight 0.6s ease 0.3s both;
+}
+
+.contact-info:hover {
+  border-color: rgba(200, 168, 75, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 24px rgba(200, 168, 75, 0.07);
+}
+
+.info-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: rgba(200,168,75,0.4);
-  transform: rotate(-5deg);
-}
-
-.contact-photo {
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  object-position: top;
-  flex-shrink: 0;
-  filter: sepia(0.15) contrast(1.05);
-}
-
-.contact-info {
-  background: #140000;
-  border: 1px solid var(--border);
-  padding: 20px 24px;
-  flex: 1;
-}
-
-.contact-info h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 14px;
-}
-
-.contact-info p {
-  font-size: 0.82rem;
-  color: var(--text);
+  gap: 12px;
   margin-bottom: 8px;
 }
 
-.contact-info a {
+.small-ornament {
   color: var(--gold);
-  font-size: 0.8rem;
-  word-break: break-all;
-  text-decoration: underline;
-  display: block;
-  margin-bottom: 4px;
+  font-size: 1.2rem;
+  font-family: serif;
 }
+
+.info-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Tagline — Source Sans 3 instead of Inter (not imported) */
+.artist-tagline {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Expanding accent divider */
+.info-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold-border);
+  margin: 20px 0 24px;
+  transition: width var(--t-slow);
+}
+.contact-info:hover .info-divider { width: 80px; }
+
+/* ── CONTACT ROWS ── */
+.contact-row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--t-fast);
+}
+.contact-row:last-of-type { margin-bottom: 0; border-bottom: none; }
+.contact-row:hover { border-bottom-color: var(--border); }
 
 .contact-label {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  text-decoration: underline;
-  color: var(--text);
-  margin-top: 10px;
-  margin-bottom: 2px;
-  display: block;
+  color: var(--muted);
+  font-weight: 400;
 }
 
-@media (max-width: 580px) {
-  .contact-card { flex-direction: column; padding: 0 24px 48px; }
-  .contact-photo-placeholder { transform: none; }
+.contact-value {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem;
+  color: var(--gold);
+  text-decoration: none;
+  word-break: break-all;
+  transition: color var(--t-fast);
+}
+.contact-value:hover { color: var(--gold-lt); }
+
+/* ── CONTACT FOOTER (optional internal) ── */
+.contact-footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 1px solid rgba(200, 168, 75, 0.2);
+}
+
+.dot {
+  color: var(--gold);
+  font-size: 0.6rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .contact-card {
+    flex-direction: column;
+    padding: 0 24px 48px;
+    gap: 32px;
+  }
+  .photo-frame { width: 180px; height: 220px; }
+  .contact-info { padding: 28px 24px; width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .contact-info { padding: 24px 20px; }
+  .info-header h2 { font-size: 1.1rem; }
+  .contact-value { font-size: 0.78rem; }
 }

@@ -1,11 +1,28 @@
 
 .home-hero {
   min-height: calc(100vh - 54px);
+  background: linear-gradient(180deg, var(--bg2) 0%, rgba(26, 0, 0, 0.85) 100%);
   background: var(--bg2);
   display: flex;
   flex-direction: column;
   overflow: visible;
   position: relative;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.03) 0px,
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  pointer-events: none;
+  z-index: 0;
 }
 
 
@@ -22,8 +39,22 @@
   width: 100%;
   position: relative;
   z-index: 1;
-}
 
+
+background: linear-gradient(
+    90deg,
+    var(--gold)    0%,
+    var(--gold-lt) 35%,
+    #fff7d6        50%,
+    var(--gold-lt) 65%,
+    var(--gold)    100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldShimmer 6s linear infinite, fadeIn 0.7s ease both;
+}
 
 .home-hero-row {
   display: grid;
@@ -46,6 +77,7 @@
   position: relative;
   z-index: 5;
   margin-left: 200px; 
+    animation: slideInLeft 0.65s ease 0.25s both;
 }
 
 .home-tags span {
@@ -57,6 +89,12 @@
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1.4;
+   transition: color var(--t-fast), letter-spacing var(--t-fast);
+}
+
+.home-tags span:hover {
+  color: var(--gold);
+  letter-spacing: 0.13em;
 }
 
 
@@ -66,6 +104,7 @@
   justify-content: center;
   position: relative;
   margin-top: -220px;
+    animation: fadeUp 0.7s ease 0.1s both;
 }
 
 .home-photo img {
@@ -77,30 +116,37 @@
   filter: sepia(0.2) contrast(1.05);
   display: block;
   position: relative;
-  z-index: 10; /* HIGHEST z-index - sits on top of everything */
+  z-index: 10; 
+   transition: filter var(--t-slow);
 }
 
-/* Right: DESI GNER text */
+.home-photo img:hover {
+  filter: sepia(0.05) contrast(1.1) brightness(1.04);
+}
+
+
 .home-right {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 0 40px 24px;
+    margin-right: 10rem;
   align-self: center;
   position: relative;
   z-index: 5;
+   animation: slideInRight 0.65s ease 0.25s both;
 }
 
 .home-big-title {
   font-family: 'Oswald', sans-serif;
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(4.5rem, 9vw, 8rem);
   font-weight: 900;
   color: var(--white);
   line-height: 0.85;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+    transition: color var(--t-mid);
 }
-
+.home-big-title:hover { color: var(--gold-lt); }
 /* ── ABOUT SECTION ── */
 .home-about {
   padding: 80px 48px;
@@ -110,6 +156,7 @@
   position: relative;
   z-index: 3;
   background: var(--bg2);
+    animation: fadeUp 0.65s ease 0.4s both;
 }
 
 .home-about h2 {
@@ -132,54 +179,6 @@
   letter-spacing: 0.01em;
 }
 
-.btn-row {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn-gold {
-  font-family: 'Oswald', sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 14px 36px;
-  background: transparent;
-  border: 1.5px solid var(--gold);
-  color: var(--gold);
-  cursor: pointer;
-  transition: all 0.25s ease;
-  font-weight: 500;
-}
-.btn-gold:hover {
-  background: var(--gold);
-  color: #0d0000;
-}
-
-.btn-dark {
-  font-family: 'Oswald', sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 14px 36px;
-  background: transparent;
-  border: 1.5px solid var(--text);
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.25s ease;
-  font-weight: 500;
-}
-.btn-dark:hover {
-  background: var(--text);
-  color: #0d0000;
-}
-
-.divider {
-  height: 1px;
-  background: var(--border);
-  margin: 0 32px;
-}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1200px) {

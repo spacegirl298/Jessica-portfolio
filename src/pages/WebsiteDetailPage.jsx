@@ -26,11 +26,6 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
 
   const { detail } = site;
 
-  const screenshotRows = [];
-  for (let i = 0; i < detail.screenshots.length; i += 3) {
-    screenshotRows.push(detail.screenshots.slice(i, i + 3));
-  }
-
   return (
     <>
       <button
@@ -49,50 +44,32 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
         {/* SCREENSHOTS */}
         <p className="detail-section-title">Website Screenshots</p>
 
-        {screenshotRows.map((row, ri) => (
-          <div
-            key={ri}
-            className="screenshots-grid"
-            style={{
-              gridTemplateColumns: `repeat(${row.length}, 1fr)`,
-            }}
-          >
-            {row.map((item, si) => (
-              <div className="screenshot-box" key={si}>
-                <img
-                  src={item.image}
-                  alt={item.label}
-                  className="about-photo-placeholder"
-                />
-                <span>
-                  FIGURE {ri * 3 + si + 1}: {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        ))}
+        <div className="screenshots-grid">
+          {detail.screenshots.map((item, idx) => (
+            <div className="screenshot-box" key={idx}>
+              <img
+                src={item.image}
+                alt={item.label}
+              />
+              <span>
+                FIGURE {idx + 1}: {item.label}
+              </span>
+            </div>
+          ))}
+        </div>
 
         {/* WIREFRAMES */}
         <p className="detail-section-title">Figma Wireframes</p>
 
-        <div
-          className="screenshots-grid"
-          style={{
-            gridTemplateColumns: `repeat(${Math.min(
-              detail.wireframes.length,
-              3
-            )}, 1fr)`,
-          }}
-        >
-          {detail.wireframes.map((item, i) => (
-            <div className="screenshot-box" key={i}>
+        <div className="screenshots-grid">
+          {detail.wireframes.map((item, idx) => (
+            <div className="screenshot-box" key={idx}>
               <img
                 src={item.image}
                 alt={item.label}
-                className="about-photo-placeholder"
               />
               <span>
-                FIGURE {detail.screenshots.length + i + 1}: {item.label}
+                FIGURE {detail.screenshots.length + idx + 1}: {item.label}
               </span>
             </div>
           ))}
@@ -129,8 +106,8 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
 
         {/* BUTTONS */}
         <div className="detail-links">
-          <button className="btn-view">WEBSITE</button>
-          <button className="btn-view">FIGMA</button>
+          < a href = "https://github.com/spacegirl298/nextgen_wealth_studio" target = "_blank"><button className="btn-view">WEBSITE</button></a>
+          <a href = "https://www.figma.com/design/MrsMHkPHUhok1AzhASbtmk/IM-website?node-id=169-2&t=uEVfiEuHN4R234MK-1" target = "_blank"><button className="btn-view">FIGMA</button></a>
         </div>
 
       </div>

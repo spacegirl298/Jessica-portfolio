@@ -7,63 +7,90 @@ export default function CVPage() {
       <div className="page-hero">
         <h1>CV</h1>
       </div>
+       <div className="hero-line"></div>
 
       <div className="cv-page">
         <div className="cv-section">
-          <h2>Education</h2>
+          <h2>Experience</h2>
+
           <div className="cv-entry">
-            <h3>Bachelor of Interactive Media Design</h3>
-            <p className="cv-meta">IIE Varsity College, Sandton · 2022 – 2024</p>
+            <h3>Social Media Manager</h3>
+            <p className="cv-meta">Safe Dollar Studios · 2025 – present</p>
             <p>
-              Majored in UI/UX Design and Web Development. Graduated with distinction in
-              design practice modules.
+              Managing and growing the company’s social media presence across multiple platforms,
+              driving audience engagement and community growth. Assisting with art production,
+              including concept design, asset creation and visual consistency across projects.
             </p>
           </div>
+
           <div className="cv-entry">
-            <h3>National Senior Certificate</h3>
-            <p className="cv-meta">2021</p>
+            <h3>Social Media Manager</h3>
+            <p className="cv-meta">Press Start Mzansi · 2025</p>
+            <p>
+              Created, scheduled, and managed content calendars ensuring consistent brand messaging.
+              Led and managed a team of 3 content creators to deliver social media posts.
+            </p>
+          </div>
+
+          <div className="cv-entry">
+            <h3>Social Media Manager</h3>
+            <p className="cv-meta">Joburg Games Fest · 2025</p>
+            <p>
+              Led a team of four in driving the company’s online presence and engagement.
+              Developed and implemented strategic content plans tailored for the upcoming event.
+            </p>
+          </div>
+
+          <div className="cv-entry">
+            <h3>Promotional Model</h3>
+            <p className="cv-meta">Volvo</p>
+            <p>
+              Worked as a promotional brand ambassador for Volvo Cars, where I handled administrative
+              tasks and engaged with customers about the vehicles.
+            </p>
+          </div>
+
+          <div className="cv-entry">
+            <h3>Designer</h3>
+            <p className="cv-meta">Little Kickers</p>
+            <p>
+              Designed a calendar, blending functionality with a playful, childlike touch.
+            </p>
           </div>
         </div>
 
         <div className="cv-section">
-          <h2>Experience</h2>
+          <h2>Education</h2>
           <div className="cv-entry">
-            <h3>Junior UI/UX Designer &amp; Web Developer</h3>
-            <p className="cv-meta">Freelance · 2022 – Present</p>
-            <p>
-              Designed and developed interfaces for clients including vape retail, financial
-              advisory, game studios, and hospitality brands. Delivered logo design,
-              wireframing, prototyping and front-end development.
-            </p>
-          </div>
-          <div className="cv-entry">
-            <h3>Game UI Designer</h3>
-            <p className="cv-meta">Safe Dollar Studios · 2023</p>
-            <p>
-              Designed UI systems and 3D assets for multiple game projects including Broken
-              Bonds and Colour Chase. Established cohesive visual languages across platforms.
-            </p>
+            <h3>Bachelor of Arts in Digital Arts</h3>
+            <p className="cv-meta">University of the Witwatersrand · 2023 – 2026</p>
+            <p>Majoring in Game Design and Interactive Media</p>
           </div>
         </div>
 
         <div className="cv-section">
           <h2>Skills</h2>
           <div className="cv-entry">
-            <h3>Design Tools</h3>
-            <p>Figma, Canva, Procreate, Procreate Dreams, Krita, Adobe Illustrator</p>
-          </div>
-          <div className="cv-entry">
-            <h3>Development</h3>
-            <p>HTML, CSS, JavaScript, JSX / React, responsive web design</p>
-          </div>
-          <div className="cv-entry">
-            <h3>Disciplines</h3>
-            <p>
-              UI/UX Design, Logo Design, Branding, Game UI, Digital Illustration,
-              3D Modelling (basic)
-            </p>
+            <p>Communication, Team Leadership, Creative Problem Solving, Social Media Marketing, Graphic Design, Visual Communication</p>
           </div>
         </div>
+
+        <div className="cv-section">
+          <h2>Certifications</h2>
+          <div className="cv-entry">
+            <h3>Udemy Digital Marketing</h3>
+            <p>Short course in mastery of market research, branding, funnels, copywriting, SEO, content and social media marketing, ChatGPT</p>
+          </div>
+        </div>
+
+        <div className="cv-section">
+          <h2>Languages</h2>
+          <div className="cv-entry">
+            <p>English</p>
+          </div>
+        </div>
+
+        
       </div>
 
       <div className="divider" />

@@ -8,6 +8,7 @@ export default function AboutPage() {
       <div className="page-hero">
         <h1>ABOUT</h1>
       </div>
+       <div className="hero-line"></div>
 
       <div className="about-grid">
         <div className="about-left">

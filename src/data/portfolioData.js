@@ -31,7 +31,7 @@ import StrategySelection from "../assets/ABSA/StrategySelection.png";
 import MoneyExpenses from "../assets/ABSA/MoneyExpenses.png";
 import MoneySavings from "../assets/ABSA/MoneySavings.png";
 import StrategyFPB from "../assets/ABSA/StrategyFPB.png";
-import SimulationPVR from "../assets/ABSA/SimulationPVR.png";
+import SimulationPVR from "../assets/ABSA/PVR.png";
 
 //ABSA
 import SimulationWireframe from "../assets/ABSA/SimulationWireframe.png";
@@ -75,7 +75,8 @@ export const websites = [
   {
     id: "absa",
     title: "ABSA Financial Advisor WebApp",
-    desc: "ABSA SmartFinance. Designed for young professionals...",
+    desc: "ABSA SmartFinance. Designed for young professionals, this intuitive web app lets you view and track your finances, run real-life scenarios in interactive simulation labs, and follow personalised strategy tracks to reach your goals with confidence.",
+    hasDetail: true,
     image: ABSAIMg,
     hasDetail: true,
 

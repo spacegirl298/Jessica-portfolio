@@ -1,3 +1,6 @@
+/* ══════════════════════════════════════════
+   ABOUT PAGE
+   ══════════════════════════════════════════ */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -9,6 +12,7 @@
 
 .about-left {
   padding-right: 40px;
+  animation: slideInLeft 0.6s ease 0.2s both;
 }
 
 .about-right {
@@ -16,29 +20,32 @@
   align-items: flex-start;
   justify-content: center;
   padding-top: 8px;
+  animation: slideInRight 0.6s ease 0.2s both;
 }
 
-.about-photo {
+/* ── PHOTO ──
+   JSX uses className="about-photo-placeholder" on an <img> tag,
+   so this must be styled as an image, not a div.
+   ──────────────────────────────────────────── */
+.about-photo-placeholder {
   width: 100%;
   max-width: 320px;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: top;
+  object-position: top center;
+  display: block;
   filter: sepia(0.15) contrast(1.05);
+  border: 1px solid var(--gold-border);
+  transition: filter var(--t-slow), transform var(--t-slow), box-shadow var(--t-slow);
 }
 
-.about-photo-placeholder {
-  width: 280px;
-  height: 360px;
-  background: linear-gradient(160deg, var(--bg2), var(--red));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem;
-  color: rgba(200,168,75,0.3);
+.about-photo-placeholder:hover {
+  filter: sepia(0.05) contrast(1.08) brightness(1.04);
+  transform: scale(1.015);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
+/* ── NAME ── */
 .about-name {
   font-family: 'Oswald', sans-serif;
   font-size: 1.6rem;
@@ -48,15 +55,31 @@
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
+  position: relative;
 }
 
+/* Gold accent underline animates on section hover */
+.about-name::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width var(--t-slow);
+}
+.about-left:hover .about-name::after { width: 56px; }
+
+/* ── BIO ── */
 .about-bio {
   font-size: 0.88rem;
-  line-height: 1.75;
+  line-height: 1.8;
   color: var(--text);
   margin-bottom: 32px;
 }
 
+/* ── SKILLS ── */
 .skills-section h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 1.2rem;
@@ -68,7 +91,19 @@
 }
 
 .skill-group {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-left: 2px solid transparent;
+  transition:
+    border-color   var(--t-fast),
+    background     var(--t-fast),
+    padding-left   var(--t-fast);
+}
+
+.skill-group:hover {
+  border-left-color: var(--gold);
+  background: var(--gold-dim);
+  padding-left: 16px;
 }
 
 .skill-group h4 {
@@ -78,17 +113,27 @@
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 6px;
-  text-decoration: underline;
+  /* Remove underline — the left-border effect is the accent */
 }
 
 .skill-group p {
   font-size: 0.85rem;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 680px) {
-  .about-grid { grid-template-columns: 1fr; padding: 0 24px 48px; }
-  .about-left { padding-right: 0; margin-bottom: 32px; }
-  .about-photo-placeholder { width: 100%; }
+  .about-grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px 48px;
+  }
+  .about-left {
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
+  .about-photo-placeholder {
+    max-width: 100%;
+    width: 100%;
+  }
 }

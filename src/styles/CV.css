@@ -1,12 +1,15 @@
+/* ══════════════════════════════════════════
+   CV PAGE
+   ══════════════════════════════════════════ */
 .cv-page {
   max-width: 720px;
   margin: 0 auto;
   padding: 0 32px 64px;
+  animation: fadeUp 0.55s ease 0.15s both;
 }
 
-.cv-section {
-  margin-bottom: 36px;
-}
+/* ── SECTION ── */
+.cv-section { margin-bottom: 40px; }
 
 .cv-section h2 {
   font-family: 'Oswald', sans-serif;
@@ -16,33 +19,65 @@
   color: var(--gold);
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
+/* Short gold bar grows on hover */
+.cv-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold-lt);
+  transition: width var(--t-slow);
+}
+.cv-section:hover h2::after { width: 36px; }
+
+/* ── ENTRY ── */
 .cv-entry {
   margin-bottom: 18px;
+  padding: 10px 14px;
+  border-left: 2px solid transparent;
+  transition:
+    border-color var(--t-fast),
+    background   var(--t-fast),
+    padding-left var(--t-fast);
+}
+
+.cv-entry:hover {
+  border-left-color: var(--gold);
+  background: var(--gold-dim);
+  padding-left: 20px;
 }
 
 .cv-entry h3 {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--white);
   letter-spacing: 0.06em;
+  transition: color var(--t-fast);
 }
+.cv-entry:hover h3 { color: var(--gold-lt); }
 
 .cv-entry .cv-meta {
   font-size: 0.78rem;
   color: var(--muted);
-  margin: 3px 0 6px;
+  margin: 4px 0 8px;
   font-style: italic;
+  letter-spacing: 0.02em;
 }
 
 .cv-entry p {
-  font-size: 0.83rem;
-  line-height: 1.65;
+  font-size: 0.84rem;
+  line-height: 1.7;
   color: var(--text);
 }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 680px) {
   .cv-page { padding: 0 24px 48px; }
+  .cv-entry { padding: 8px 10px; }
 }

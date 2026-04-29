@@ -39,6 +39,7 @@ export default function GameDetailPage({ gameId, navigate }) {
         <h1 style={{ fontSize: "clamp(2rem, 6vw, 4.5rem)" }}>
           {game.title.toUpperCase()}
         </h1>
+        
       </div>
 
       {/* MAIN CONTENT */}
