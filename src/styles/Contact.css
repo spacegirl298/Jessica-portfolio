@@ -1,0 +1,79 @@
+.contact-card {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 32px 64px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.contact-photo-placeholder {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--bg2), var(--red));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: rgba(200,168,75,0.4);
+  transform: rotate(-5deg);
+}
+
+.contact-photo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  filter: sepia(0.15) contrast(1.05);
+}
+
+.contact-info {
+  background: #140000;
+  border: 1px solid var(--border);
+  padding: 20px 24px;
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.contact-info p {
+  font-size: 0.82rem;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.contact-info a {
+  color: var(--gold);
+  font-size: 0.8rem;
+  word-break: break-all;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: var(--text);
+  margin-top: 10px;
+  margin-bottom: 2px;
+  display: block;
+}
+
+@media (max-width: 580px) {
+  .contact-card { flex-direction: column; padding: 0 24px 48px; }
+  .contact-photo-placeholder { transform: none; }
+}

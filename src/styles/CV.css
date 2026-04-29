@@ -1,0 +1,48 @@
+.cv-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 32px 64px;
+}
+
+.cv-section {
+  margin-bottom: 36px;
+}
+
+.cv-section h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+
+.cv-entry {
+  margin-bottom: 18px;
+}
+
+.cv-entry h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  color: var(--white);
+  letter-spacing: 0.06em;
+}
+
+.cv-entry .cv-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 3px 0 6px;
+  font-style: italic;
+}
+
+.cv-entry p {
+  font-size: 0.83rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+@media (max-width: 680px) {
+  .cv-page { padding: 0 24px 48px; }
+}

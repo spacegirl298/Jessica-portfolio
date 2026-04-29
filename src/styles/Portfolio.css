@@ -1,0 +1,464 @@
+/* ── WEBSITES ── */
+.portfolio-list {
+  padding: 0 32px 64px;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.portfolio-item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-item:last-child {
+  border-bottom: none;
+}
+
+.portfolio-item.reverse {
+  grid-template-columns: 1fr 220px;
+}
+
+.portfolio-item.reverse .portfolio-img { order: 2; }
+.portfolio-item.reverse .portfolio-text { order: 1; }
+
+.portfolio-img {
+  width: 220px;
+  aspect-ratio: 16/10;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 8px;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-text h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-text p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+/* ── GAME UI ── */
+.gameui-list {
+  padding: 0 32px 64px;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.gameui-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.gameui-item:last-child {
+  border-bottom: none;
+}
+
+.gameui-item.reverse {
+  grid-template-columns: 1fr 180px;
+}
+
+.gameui-item.reverse .gameui-img { order: 2; }
+.gameui-item.reverse .gameui-text { order: 1; }
+
+.gameui-img {
+  width: 180px;
+  aspect-ratio: 1;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 8px;
+}
+
+.gameui-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gameui-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.gameui-text p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+/* ── LOGO DESIGN ── */
+.logo-list {
+  padding: 0 32px 64px;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.logo-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-item:last-child {
+  border-bottom: none;
+}
+
+.logo-item.reverse {
+  grid-template-columns: 1fr 160px;
+}
+
+.logo-item.reverse .logo-img { order: 2; }
+.logo-item.reverse .logo-text { order: 1; }
+
+.logo-img {
+  width: 160px;
+  height: 160px;
+  background: #f0ede6;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 0.65rem;
+  color: #666;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 8px;
+}
+
+.logo-img img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.logo-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.logo-text p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ── DIGITAL DRAWINGS ── */
+.drawing-list {
+  padding: 0 32px 64px;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.drawing-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.drawing-item:last-child {
+  border-bottom: none;
+}
+
+.drawing-item.reverse {
+  grid-template-columns: 1fr 160px;
+}
+
+.drawing-item.reverse .drawing-img { order: 2; }
+.drawing-item.reverse .drawing-text { order: 1; }
+
+.drawing-img {
+  width: 160px;
+  aspect-ratio: 3/4;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 8px;
+}
+
+.drawing-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drawing-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.drawing-text p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ── DETAIL PAGES ── */
+.detail-page {
+  padding: 0 32px 64px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.detail-section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  margin: 40px 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.screenshot-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  color: var(--muted);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.screenshot-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.design-decisions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.decision-col h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.88rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.decision-col h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-top: 14px;
+  margin-bottom: 6px;
+  text-decoration: underline;
+}
+
+.decision-col p {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.decision-col ul {
+  padding-left: 16px;
+  margin-top: 4px;
+}
+
+.decision-col ul li {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.detail-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.game-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 8px;
+}
+
+.game-screenshots-mini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.game-screenshot {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  color: var(--muted);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 6px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  .portfolio-item,
+  .portfolio-item.reverse,
+  .gameui-item,
+  .gameui-item.reverse,
+  .logo-item,
+  .logo-item.reverse,
+  .drawing-item,
+  .drawing-item.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item.reverse .portfolio-img,
+  .gameui-item.reverse .gameui-img,
+  .logo-item.reverse .logo-img,
+  .drawing-item.reverse .drawing-img {
+    order: 0;
+  }
+
+  .portfolio-img,
+  .gameui-img { width: 100%; }
+  .logo-img   { width: 120px; height: 120px; }
+  .drawing-img { width: 120px; }
+
+  .screenshots-grid { grid-template-columns: 1fr 1fr; }
+  .design-decisions { grid-template-columns: 1fr; }
+  .game-detail-grid { grid-template-columns: 1fr; }
+
+  .portfolio-list,
+  .gameui-list,
+  .logo-list,
+  .drawing-list,
+  .detail-page { padding-left: 20px; padding-right: 20px; }
+}
+.game-screenshots-mini {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.game-screenshot {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.game-screenshot img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.game-screenshot span {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+}

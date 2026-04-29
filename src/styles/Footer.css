@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px 32px;
+  border-top: 1px solid var(--border);
+  background: #0d0000;
+}
+
+.footer a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 480px) {
+  .footer { gap: 16px; flex-wrap: wrap; }
+}
