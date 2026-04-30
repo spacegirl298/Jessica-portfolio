@@ -1,4 +1,3 @@
-
 .home-hero {
   min-height: calc(100vh - 54px);
   background: linear-gradient(180deg, var(--bg2) 0%, rgba(26, 0, 0, 0.85) 100%);
@@ -10,24 +9,22 @@
 }
 
 .home-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(0,0,0,0.03) 0px,
-      rgba(0,0,0,0.03) 1px,
-      transparent 1px,
-      transparent 4px
-    );
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.03) 0px,
+    rgba(0, 0, 0, 0.03) 1px,
+    transparent 1px,
+    transparent 4px
+  );
   pointer-events: none;
   z-index: 0;
 }
 
-
 .portfolio-label {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(4rem, 14vw, 9rem);
   font-weight: 900;
   letter-spacing: -0.01em;
@@ -40,20 +37,21 @@
   position: relative;
   z-index: 1;
 
-
-background: linear-gradient(
+  background: linear-gradient(
     90deg,
-    var(--gold)    0%,
+    var(--gold) 0%,
     var(--gold-lt) 35%,
-    #fff7d6        50%,
+    #fff7d6 50%,
     var(--gold-lt) 65%,
-    var(--gold)    100%
+    var(--gold) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: goldShimmer 6s linear infinite, fadeIn 0.7s ease both;
+  animation:
+    goldShimmer 6s linear infinite,
+    fadeIn 0.7s ease both;
 }
 
 .home-hero-row {
@@ -63,10 +61,9 @@ background: linear-gradient(
   align-items: flex-end;
   gap: 0;
   position: relative;
-  margin-top: -180px; 
+  margin-top: -180px;
   z-index: 2;
 }
-
 
 .home-tags {
   display: flex;
@@ -76,20 +73,22 @@ background: linear-gradient(
   align-self: center;
   position: relative;
   z-index: 5;
-  margin-left: 200px; 
-    animation: slideInLeft 0.65s ease 0.25s both;
+  margin-left: 200px;
+  animation: slideInLeft 0.65s ease 0.25s both;
 }
 
 .home-tags span {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 
-  font-size: 3rem; 
+  font-size: 3rem;
   color: var(--text);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1.4;
-   transition: color var(--t-fast), letter-spacing var(--t-fast);
+  transition:
+    color var(--t-fast),
+    letter-spacing var(--t-fast);
 }
 
 .home-tags span:hover {
@@ -97,14 +96,14 @@ background: linear-gradient(
   letter-spacing: 0.13em;
 }
 
-
 .home-photo {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   position: relative;
   margin-top: -220px;
-    animation: fadeUp 0.7s ease 0.1s both;
+  animation: fadeUp 0.7s ease 0.1s both;
+  z-index: 5;
 }
 
 .home-photo img {
@@ -114,39 +113,62 @@ background: linear-gradient(
   object-fit: cover;
   object-position: center 10%;
   filter: sepia(0.2) contrast(1.05);
-  display: block;
-  position: relative;
-  z-index: 10; 
-   transition: filter var(--t-slow);
+
+  z-index: 5;
+  transition: filter var(--t-slow);
 }
 
 .home-photo img:hover {
   filter: sepia(0.05) contrast(1.1) brightness(1.04);
 }
 
-
 .home-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-    margin-right: 10rem;
-  align-self: center;
-  position: relative;
-  z-index: 5;
-   animation: slideInRight 0.65s ease 0.25s both;
+
 }
 
+
 .home-big-title {
-  font-family: 'Oswald', sans-serif;
-  font-size: clamp(4.5rem, 9vw, 8rem);
+  position: relative;
+  margin-bottom: 8rem;
+  margin-left: -7rem;
+}
+
+.front {
+     font-family: "Oswald", sans-serif;
+  font-size: clamp(8rem, 11vw, 10rem);
   font-weight: 900;
   color: var(--white);
   line-height: 0.85;
   text-transform: uppercase;
   letter-spacing: -0.02em;
-    transition: color var(--t-mid);
+  transition: color var(--t-mid);
+  position: relative;
+  z-index: 10;
+    margin-top: 1rem;
+  align-self: center;
+  animation: slideInRight 0.65s ease 0.25s both;
 }
-.home-big-title:hover { color: var(--gold-lt); }
+
+.behind {
+     font-family: "Oswald", sans-serif;
+  font-size: clamp(8rem, 11vw, 10rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 0.85;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  transition: color var(--t-mid);
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+
+  align-self: center;
+  animation: slideInRight 0.65s ease 0.25s both;
+}
+
+.home-big-title:hover {
+  color: var(--gold-lt);
+}
 /* ── ABOUT SECTION ── */
 .home-about {
   padding: 80px 48px;
@@ -156,11 +178,11 @@ background: linear-gradient(
   position: relative;
   z-index: 3;
   background: var(--bg2);
-    animation: fadeUp 0.65s ease 0.4s both;
+  animation: fadeUp 0.65s ease 0.4s both;
 }
 
 .home-about h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -179,13 +201,12 @@ background: linear-gradient(
   letter-spacing: 0.01em;
 }
 
-
 /* ── RESPONSIVE ── */
 @media (max-width: 1200px) {
   .home-tags span {
     font-size: 1.4rem;
   }
-  
+
   .home-tags {
     margin-left: 30px;
   }
@@ -195,15 +216,15 @@ background: linear-gradient(
   .home-hero-row {
     margin-top: -150px;
   }
-  
+
   .home-photo {
     margin-top: -190px;
   }
-  
+
   .home-tags span {
     font-size: 1.2rem;
   }
-  
+
   .home-tags {
     margin-left: 20px;
   }
@@ -213,15 +234,15 @@ background: linear-gradient(
   .home-hero-row {
     margin-top: -120px;
   }
-  
+
   .home-photo {
     margin-top: -160px;
   }
-  
+
   .home-tags span {
     font-size: 1rem;
   }
-  
+
   .home-tags {
     margin-left: 15px;
     gap: 4px;
@@ -285,15 +306,15 @@ background: linear-gradient(
   .home-hero-row {
     margin-top: -60px;
   }
-  
+
   .home-photo {
     margin-top: -90px;
   }
-  
+
   .home-tags span {
     font-size: 0.75rem;
   }
-  
+
   .home-tags {
     margin-left: 4px;
   }

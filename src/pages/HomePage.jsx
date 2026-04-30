@@ -27,12 +27,12 @@ export default function HomePage({ navigate }) {
             />
           </div>
 
-          {/* Right: DESI GNER big title */}
-          <div className="home-right">
+        
             <h1 className="home-big-title">
-              DESI<br />GNER
+              <div className="behind">DESI</div>
+              <div className="front">GNER</div>
             </h1>
-          </div>
+         
         </div>
       </div>
 

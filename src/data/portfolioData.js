@@ -11,7 +11,7 @@ import CannaImg from "../assets/CannaImg.jpg";
 //GameUI
 import ColourImg from "../assets/ColourImg.png";
 import NightImg from "../assets/NightMoversImg.PNG";
-import BrokenImg from "../assets/BrokenBondsImg.PNG";
+import BrokenImg from "../assets/Broken Bonds/BrokenBonds.png";
 import BoredomImg from "../assets/BoredomImg.PNG";
 import PenguinImg from "../assets/SirPenguinImg.PNG";
 
@@ -30,7 +30,7 @@ import SimulationSelection from "../assets/ABSA/SimulationSelection.png";
 import StrategySelection from "../assets/ABSA/StrategySelection.png";
 import MoneyExpenses from "../assets/ABSA/MoneyExpenses.png";
 import MoneySavings from "../assets/ABSA/MoneySavings.png";
-import StrategyFPB from "../assets/ABSA/StrategyFPB.png";
+import StrategyFPB from "../assets/ABSA/StrategyPVRWF.png";
 import SimulationPVR from "../assets/ABSA/PVR.png";
 
 //ABSA
