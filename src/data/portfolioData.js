@@ -95,7 +95,24 @@ import HabContactD from "../assets/Habibi/ContactD.png";
 import HabContactM from "../assets/Habibi/ContactM.png";
 
 //Now Med Website
-
+import MedLogM from "../assets/NowMed/MedLogM.png";
+import MedLogD from "../assets/NowMed/MedLogD.png";
+import MedSignPatientM from "../assets/NowMed/MedSignPatientM.png";
+import MedSignPatientD from "../assets/NowMed/MedSignPatientD.png";
+import MedSignSecretaryM from "../assets/NowMed/MedSignSecretaryM.png";
+import MedSignSecretaryD from "../assets/NowMed/MedSignSecretaryD.png";
+import MedEmailM from "../assets/NowMed/MedEmailM.png";
+import MedEmailD from "../assets/NowMed/MedEmailD.png";
+import MedPatientM from "../assets/NowMed/MedPatientM.png";
+import MedPatientD from "../assets/NowMed/MedPatientD.png";
+import MedSecretaryM from "../assets/NowMed/MedSecretaryM.png";
+import MedSecretaryD from "../assets/NowMed/MedSecretaryD.png";
+import MedBookM from "../assets/NowMed/MedBookM.png";
+import MedTimeM from "../assets/NowMed/MedTimeM.png";
+import MedConfirmM from "../assets/NowMed/MedConfirmM.png";
+import MedConfirmBookM from "../assets/NowMed/MedConfirmBookM.png";
+import MedNotificationM from "../assets/NowMed/MedNotificationM.png";
+import MedDelayM from "../assets/NowMed/MedDelayM.png";
 
 //Broken Bonds
 import BBComplete from "../assets/Broken Bonds/BBComplete.PNG";
@@ -442,36 +459,24 @@ export const websites = [
 
     detail: {
       wireframes: [
-        { label: "Sign Up Desktop", image: HabSignD},
-        { label: "Sign Up Mobile", image: HabSignM },
-        { label: "Confirmation Code Desktop", image: HabConfirmationD },
-        { label: "Confirmation Code Mobile", image: HabConfirmationM },
-        { label: "Log in Desktop", image: HabLogD },
-        { label: "Log in Mobile", image: HabLogM },
-        { label: "Forgot Password Desktop", image: HabForgotD },
-        { label: "Forgot Password Mobile", image: HabForgotM },
-        { label: "Confirmation Code Desktop", image: HabConfirmationD },
-        { label: "Confirmation Code Mobile", image: HabConfirmationM },
-        { label: "Home Desktop", image: HabHomeD},
-        { label: "Home Mobile", image: HabHomeM},
-        { label: "Vapes Selection Desktop", image: HabVapesD },
-        { label: "Vapes Selection Mobile", image: HabVapesM},
-        { label: "Vape Details Desktop", image: HabVapeDetailD },
-        { label: "Vape Details Mobile", image: HabVapeDetailM },
-        { label: "Profile Desktop", image: HabProfileD},
-        { label: "Edit Profile Desktop", image: HabEditProfileD },
-        { label: "Profile Mobile", image: HabProfileM },
-        { label: "Edit Profile Mobile", image: HabEditProfileM },
-        { label: "Cart Desktop", image: HabCartD},
-        { label: "Cart Mobile", image: HabCartM },
-        { label: "Checkout Desktop", image: HabCheckoutD },
-        { label: "Checkout Mobile", image: HabCheckoutM },
-        { label: "Wishlist Desktop", image: HabWishlistD },
-        { label: "Wishlist Mobile", image: HabWishlistM },
-        { label: "Contact Desktop", image: HabContactD },
-        { label: "Contact Mobile", image: HabContactM },
-        { label: "Orders Desktop", image: HabOrdersD },
-        { label: "Orders Mobile", image: HabOrdersM },
+        { label: "Log in Mobile", image: MedLogM},
+        { label: "Log in Desktop", image: MedLogD },
+        { label: "Patient Sign Up Mobile", image: MedSignPatientM},
+        { label: "Patient Sign Up Desktop", image: MedSignPatientD },
+        { label: "Secretary Sign Up Mobile", image: MedSecretaryM },
+        { label: "Secretary Sign Up Desktop", image: MedSecretaryD },
+        { label: "Verification Email Mobile", image: MedEmailM },
+        { label: "Verification Email Desktop", image: MedEmailD },
+        { label: "Patient Dashboard Mobile", image: MedPatientM },
+        { label: "Patient Dashboard Desktop", image: MedPatientD},
+        { label: "Secretary Dashboard Mobile", image: MedSecretaryM},
+        { label: "Secretary Dashboard Desktop", image: MedSecretaryD},
+        { label: "Patient Book Appointment Mobile", image: MedBookM},
+        { label: "Patient Select Appointment Time Mobile", image: MedTimeM},
+        { label: "Patient Confirm Booking Mobile", image: MedBookM},
+        { label: "Patient Booking Confirmed Mobile", image: MedConfirmBookM },
+        { label: "Notifications Mobile", image: MedNotificationM},
+        { label: "Delay Mobile", image: MedDelayM},
       ],
 
       executiveSummary:
