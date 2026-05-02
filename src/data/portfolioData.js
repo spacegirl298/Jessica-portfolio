@@ -41,6 +41,28 @@ import SimulationFPBWF from "../assets/ABSA/SimualtionFPBWF.png";
 import MoneyWireframe from "../assets/ABSA/MoneyWireframe.png";
 import HomeWireframe from "../assets/ABSA/HomeWireframe.png";
 
+//SDS Screenshot
+import SDSHome from "../assets/SDS/SDSHome.png";
+import SDSGameMain from "../assets/SDS/SDSGameMain.png";
+import SDSGameIndividual from "../assets/SDS/SDSGameIndividual.png";
+import SDSAbout from "../assets/SDS/SDSAbout.png";
+import SDSTeam from "../assets/SDS/SDSAbout.png";
+import SDSContact from "../assets/SDS/SDSContact.png";
+
+//SDS Wireframe
+import SDSHomeD from "../assets/SDS/SDSHomeDWf.png";
+import SDSHomeM from "../assets/SDS/SDSHomeMWf.png";
+import SDSGameMainD from "../assets/SDS/SDSGameMainDWf.png";
+import SDSGameMainM from "../assets/SDS/SDSGameMainMWf.png";
+import SDSGameIndividualD from "../assets/SDS/SDSGameIndividualDWf.png";
+import SDSGameIndividualM from "../assets/SDS/SDSGameIndividualMWf.png";
+import SDSAboutD from "../assets/SDS/SDSAboutDWf.png";
+import SDSAboutM from "../assets/SDS/SDSAboutMWf.png";
+import SDSTeamD from "../assets/SDS/SDSTeamDWf.png";
+import SDSTeamM from "../assets/SDS/SDSTeamMWf.png";
+import SDSContactD from "../assets/SDS/SDSContactDWf.png";
+import SDSContactM from "../assets/SDS/SDSContactMWf.png";
+
 //Broken Bonds
 import BBComplete from "../assets/Broken Bonds/BBComplete.PNG";
 import BBController from "../assets/Broken Bonds/BBController.png";
@@ -78,7 +100,10 @@ export const websites = [
     desc: "ABSA SmartFinance. Designed for young professionals, this intuitive web app lets you view and track your finances, run real-life scenarios in interactive simulation labs, and follow personalised strategy tracks to reach your goals with confidence.",
     hasDetail: true,
     image: ABSAIMg,
-    hasDetail: true,
+    links: {
+      website: "https://github.com/spacegirl298/nextgen_wealth_studio",
+      figma: "https://www.figma.com/design/MrsMHkPHUhok1AzhASbtmk/IM-website?node-id=169-2&t=uEVfiEuHN4R234MK-1",
+    },
 
     detail: {
       screenshots: [
@@ -177,6 +202,98 @@ export const websites = [
     desc: "Safe Dollar Studios is a game design company. The website showcases the studio's creative portfolio and the team behind its work. Visitors can explore the company's completed projects, learn about the designers and developers on staff, and get a clear sense of the studio's creative vision and expertise.",
     image: SDSImg,
     hasDetail: true,
+    links: {
+      website: "https://your-safedollar-link.com",
+      figma: "https://your-safedollar-figma-link.com",
+    },
+
+    detail: {
+      screenshots: [
+        { label: "Home Screen", image: SDSHome },
+        { label: "Game Selection", image: SDSGameMain },
+        { label: "Individual Game", image: SDSGameIndividual },
+        { label: "About Us", image: SDSAbout },
+        { label: "Team", image: SDSTeam },
+        { label: "Contact Us", image: SDSContact },
+      ],
+
+      wireframes: [
+        { label: "Home Desktop Wireframe", image: SDSHomeD },
+        { label: "Home Mobile Wireframe", image: SDSHomeM },
+        { label: "Game Selection Desktop Wireframe", image: SDSGameMainD },
+        { label: "Game Selection Mobile Wireframe", image: SDSGameMainM },
+        {
+          label: "Individual Game Desktop Wireframe",
+          image: SDSGameIndividualD,
+        },
+        {
+          label: "Individual Game Mobile Wireframe",
+          image: SDSGameIndividualM,
+        },
+        { label: "About Us Desktop", image: SDSAboutD },
+        { label: "About Us Mobile", image: SDSAboutM },
+        { label: "Team Desktop", image: SDSTeamD },
+        { label: "Team Mobile", image: SDSTeamM },
+        { label: "Contact Us Desktop", image: SDSContactD },
+        { label: "Contact Us Mobile", image: SDSContactM },
+      ],
+
+      executiveSummary:
+        "Safe Dollar Studios creates a wide range of games — from action-packed adventures to satisfying cleaning games — always striving to deliver playful experiences with fresh mechanics. The studio targets younger audiences who can enjoy games alongside their friends or parents. This website exists to highlight the studio's work, their journey, what they stand for, and the team behind it all. The company needed a dedicated space to showcase their portfolio, share their story, and give people a way to get in touch.",
+
+      keySections: [
+        "Home — introduction to the studio",
+        "Games Overview — A showcase of all the studio's games, each with a link to play",
+        "Games Individual — In-depth information per game, including screenshots and a link to the itch.io page",
+        "About Us — The studio's story, mission, values, and awards",
+        "Team — An overview of the team and their individual roles",
+        "Contact Us — Access to all social links and a direct email form",
+      ],
+
+      successCriteria: [
+        "Users can discover and access the studio's games and information",
+        "Users are motivated to play the games or contact the studio",
+        "Users can easily reach out to the studio through multiple channels",
+      ],
+
+      customerBackground:
+        "People interested in indie games often don't have easy access to the studio's work or enough information to learn more about who made it. They need a space to explore the games and understand the studio before deciding to play.",
+
+      challenges: [
+        "No existing space to showcase the studio's portfolio or share their story",
+        "No central point of contact for players or collaborators",
+      ],
+
+      mood: "The company's brand identity is built around creativity and playfulness, and the website is designed to reflect that. Interactive elements keep users engaged and intrigued as they explore. The colour palette is crafted to feel distinctive yet approachable — bold enough to stand out, warm enough to welcome. Orange is the primary accent colour: eye-catching and energetic, it communicates the studio's playful and creative spirit while maintaining a sense of professionalism.",
+
+      features: [
+        {
+          title: "Home",
+          description:
+            "The home page introduces users to the studio before they explore further. It features an image carousel showcasing the team, giving visitors a personal, human first impression of the people behind the games.",
+        },
+        {
+          title: "Games Overview",
+          description:
+            "This page was designed to give users access to all of the studio's games, with the understanding that many more titles will be added over time. A search function allows users to quickly find a specific game they're looking for, keeping navigation simple as the library grows.",
+        },
+        {
+          title: "Games Indidvidual",
+          description:
+            "Each game has its own dedicated page featuring a description of the game, screenshots, and a direct link to the itch.io page where users can download and play it.",
+        },
+        {
+          title: "Team",
+          description:
+            "The Team page is designed to give recognition to every member of the studio. It reuses the same image carousel component as the homepage, reinforcing design consistency across the site. Each team member's card flips on hover to reveal their role and a short bio.",
+        },
+        {
+          title: "Contact Us",
+          description:
+            "The Contact page provides multiple ways for users to connect with the studio. Social media links invite visitors to explore the studio's more casual, creative side through their online channels. A contact form lets users fill in their details and send a direct message to the studio — a simple and efficient way to get in touch.",
+        },
+      ],
+    },
   },
   {
     id: "habibi",
@@ -184,6 +301,98 @@ export const websites = [
     desc: "Habibi Vapes is a vape retail company whose website is designed to sell products directly to customers. The site showcases the full range of available vapes, allowing visitors to browse different options and make purchases seamlessly online.",
     image: HabibiImg,
     hasDetail: true,
+    links: {
+      website: "https://your-safedollar-link.com",
+      figma: "https://your-safedollar-figma-link.com",
+    },
+
+    detail: {
+      screenshots: [
+        { label: "Home Screen", image: SDSHome },
+        { label: "Game Selection", image: SDSGameMain },
+        { label: "Individual Game", image: SDSGameIndividual },
+        { label: "About Us", image: SDSAbout },
+        { label: "Team", image: SDSTeam },
+        { label: "Contact Us", image: SDSContact },
+      ],
+
+      wireframes: [
+        { label: "Home Desktop Wireframe", image: SDSHomeD },
+        { label: "Home Mobile Wireframe", image: SDSHomeM },
+        { label: "Game Selection Desktop Wireframe", image: SDSGameMainD },
+        { label: "Game Selection Mobile Wireframe", image: SDSGameMainM },
+        {
+          label: "Individual Game Desktop Wireframe",
+          image: SDSGameIndividualD,
+        },
+        {
+          label: "Individual Game Mobile Wireframe",
+          image: SDSGameIndividualM,
+        },
+        { label: "About Us Desktop", image: SDSAboutD },
+        { label: "About Us Mobile", image: SDSAboutM },
+        { label: "Team Desktop", image: SDSTeamD },
+        { label: "Team Mobile", image: SDSTeamM },
+        { label: "Contact Us Desktop", image: SDSContactD },
+        { label: "Contact Us Mobile", image: SDSContactM },
+      ],
+
+      executiveSummary:
+        "Safe Dollar Studios creates a wide range of games — from action-packed adventures to satisfying cleaning games — always striving to deliver playful experiences with fresh mechanics. The studio targets younger audiences who can enjoy games alongside their friends or parents. This website exists to highlight the studio's work, their journey, what they stand for, and the team behind it all. The company needed a dedicated space to showcase their portfolio, share their story, and give people a way to get in touch.",
+
+      keySections: [
+        "Home — introduction to the studio",
+        "Games Overview — A showcase of all the studio's games, each with a link to play",
+        "Games Individual — In-depth information per game, including screenshots and a link to the itch.io page",
+        "About Us — The studio's story, mission, values, and awards",
+        "Team — An overview of the team and their individual roles",
+        "Contact Us — Access to all social links and a direct email form",
+      ],
+
+      successCriteria: [
+        "Users can discover and access the studio's games and information",
+        "Users are motivated to play the games or contact the studio",
+        "Users can easily reach out to the studio through multiple channels",
+      ],
+
+      customerBackground:
+        "People interested in indie games often don't have easy access to the studio's work or enough information to learn more about who made it. They need a space to explore the games and understand the studio before deciding to play.",
+
+      challenges: [
+        "No existing space to showcase the studio's portfolio or share their story",
+        "No central point of contact for players or collaborators",
+      ],
+
+      mood: "The company's brand identity is built around creativity and playfulness, and the website is designed to reflect that. Interactive elements keep users engaged and intrigued as they explore. The colour palette is crafted to feel distinctive yet approachable — bold enough to stand out, warm enough to welcome. Orange is the primary accent colour: eye-catching and energetic, it communicates the studio's playful and creative spirit while maintaining a sense of professionalism.",
+
+      features: [
+        {
+          title: "Home",
+          description:
+            "The home page introduces users to the studio before they explore further. It features an image carousel showcasing the team, giving visitors a personal, human first impression of the people behind the games.",
+        },
+        {
+          title: "Games Overview",
+          description:
+            "This page was designed to give users access to all of the studio's games, with the understanding that many more titles will be added over time. A search function allows users to quickly find a specific game they're looking for, keeping navigation simple as the library grows.",
+        },
+        {
+          title: "Games Indidvidual",
+          description:
+            "Each game has its own dedicated page featuring a description of the game, screenshots, and a direct link to the itch.io page where users can download and play it.",
+        },
+        {
+          title: "Team",
+          description:
+            "The Team page is designed to give recognition to every member of the studio. It reuses the same image carousel component as the homepage, reinforcing design consistency across the site. Each team member's card flips on hover to reveal their role and a short bio.",
+        },
+        {
+          title: "Contact Us",
+          description:
+            "The Contact page provides multiple ways for users to connect with the studio. Social media links invite visitors to explore the studio's more casual, creative side through their online channels. A contact form lets users fill in their details and send a direct message to the studio — a simple and efficient way to get in touch.",
+        },
+      ],
+    },
   },
 ];
 export const gameUIs = [
