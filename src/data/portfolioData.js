@@ -1,5 +1,5 @@
 //Websites
-import ABSAIMg from "../assets/ABSAHomeImg.png";
+import ABSAIMg from "../assets/ABSACover.png";
 import SDSImg from "../assets/SDSImg.png";
 import HabibiImg from "../assets/HabibiImg.png";
 
