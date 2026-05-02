@@ -2,6 +2,7 @@
 import ABSAIMg from "../assets/ABSACover.png";
 import SDSImg from "../assets/SDSImg.png";
 import HabibiImg from "../assets/HabibiImg.png";
+import NowMedImg from "../assets/NowMedCover.png"
 
 //Logo
 import TapImg from "../assets/TapImg.jpg";
@@ -63,6 +64,39 @@ import SDSTeamM from "../assets/SDS/SDSTeamMWf.png";
 import SDSContactD from "../assets/SDS/SDSContactDWf.png";
 import SDSContactM from "../assets/SDS/SDSContactMWf.png";
 
+//Habibi Wireframe
+import HabSignD from "../assets/Habibi/SignD.png";
+import HabSignM from "../assets/Habibi/SignM.png";
+import HabConfirmationD from "../assets/Habibi/ConfirmationD.png";
+import HabConfirmationM from "../assets/Habibi/ConfirmationM.png";
+import HabLogD from "../assets/Habibi/LogD.png";
+import HabLogM from "../assets/Habibi/LogM.png";
+import HabForgotD from "../assets/Habibi/ForgotD.png";
+import HabForgotM from "../assets/Habibi/ForgotM.png";
+import HabHomeD from "../assets/Habibi/HomeD.png";
+import HabHomeM from "../assets/Habibi/HomeM.png";
+import HabVapesD from "../assets/Habibi/VapesD.png";
+import HabVapesM from "../assets/Habibi/VapesM.png";
+import HabVapeDetailD from "../assets/Habibi/VapeDetailD.png";
+import HabVapeDetailM from "../assets/Habibi/VapeDetailM.png";
+import HabProfileD from "../assets/Habibi/ProfileD.png";
+import HabEditProfileD from "../assets/Habibi/EditProfileD.png";
+import HabProfileM from "../assets/Habibi/ProfileM.png";
+import HabEditProfileM from "../assets/Habibi/EditProfileM.png";
+import HabCartD from "../assets/Habibi/CartD.png";
+import HabCartM from "../assets/Habibi/CartM.png";
+import HabCheckoutD from "../assets/Habibi/CheckoutD.png";
+import HabCheckoutM from "../assets/Habibi/CheckoutM.png";
+import HabWishlistD from "../assets/Habibi/WishlistD.png";
+import HabWishlistM from "../assets/Habibi/WishlistM.png";
+import HabOrdersD from "../assets/Habibi/OrdersD.png";
+import HabOrdersM from "../assets/Habibi/OrdersM.png";
+import HabContactD from "../assets/Habibi/ContactD.png";
+import HabContactM from "../assets/Habibi/ContactM.png";
+
+//Now Med Website
+
+
 //Broken Bonds
 import BBComplete from "../assets/Broken Bonds/BBComplete.PNG";
 import BBController from "../assets/Broken Bonds/BBController.png";
@@ -102,7 +136,8 @@ export const websites = [
     image: ABSAIMg,
     links: {
       website: "https://github.com/spacegirl298/nextgen_wealth_studio",
-      figma: "https://www.figma.com/design/MrsMHkPHUhok1AzhASbtmk/IM-website?node-id=169-2&t=uEVfiEuHN4R234MK-1",
+      figma:
+        "https://www.figma.com/design/MrsMHkPHUhok1AzhASbtmk/IM-website?node-id=169-2&t=uEVfiEuHN4R234MK-1",
     },
 
     detail: {
@@ -203,8 +238,7 @@ export const websites = [
     image: SDSImg,
     hasDetail: true,
     links: {
-      website: "https://your-safedollar-link.com",
-      figma: "https://your-safedollar-figma-link.com",
+      website: "https://spacegirl298.github.io/Safe-Dollar-Studios/",
     },
 
     detail: {
@@ -302,39 +336,142 @@ export const websites = [
     image: HabibiImg,
     hasDetail: true,
     links: {
-      website: "https://your-safedollar-link.com",
-      figma: "https://your-safedollar-figma-link.com",
+      figma: "https://www.figma.com/design/OWh0w4qioDyJxeOcg4BKL8/Habibi-Vapes?node-id=55-1636&t=NhKkXVZfan0GTy8T-1",
     },
 
     detail: {
-      screenshots: [
-        { label: "Home Screen", image: SDSHome },
-        { label: "Game Selection", image: SDSGameMain },
-        { label: "Individual Game", image: SDSGameIndividual },
-        { label: "About Us", image: SDSAbout },
-        { label: "Team", image: SDSTeam },
-        { label: "Contact Us", image: SDSContact },
+      wireframes: [
+        { label: "Sign Up Desktop", image: HabSignD},
+        { label: "Sign Up Mobile", image: HabSignM },
+        { label: "Confirmation Code Desktop", image: HabConfirmationD },
+        { label: "Confirmation Code Mobile", image: HabConfirmationM },
+        { label: "Log in Desktop", image: HabLogD },
+        { label: "Log in Mobile", image: HabLogM },
+        { label: "Forgot Password Desktop", image: HabForgotD },
+        { label: "Forgot Password Mobile", image: HabForgotM },
+        { label: "Confirmation Code Desktop", image: HabConfirmationD },
+        { label: "Confirmation Code Mobile", image: HabConfirmationM },
+        { label: "Home Desktop", image: HabHomeD},
+        { label: "Home Mobile", image: HabHomeM},
+        { label: "Vapes Selection Desktop", image: HabVapesD },
+        { label: "Vapes Selection Mobile", image: HabVapesM},
+        { label: "Vape Details Desktop", image: HabVapeDetailD },
+        { label: "Vape Details Mobile", image: HabVapeDetailM },
+        { label: "Profile Desktop", image: HabProfileD},
+        { label: "Edit Profile Desktop", image: HabEditProfileD },
+        { label: "Profile Mobile", image: HabProfileM },
+        { label: "Edit Profile Mobile", image: HabEditProfileM },
+        { label: "Cart Desktop", image: HabCartD},
+        { label: "Cart Mobile", image: HabCartM },
+        { label: "Checkout Desktop", image: HabCheckoutD },
+        { label: "Checkout Mobile", image: HabCheckoutM },
+        { label: "Wishlist Desktop", image: HabWishlistD },
+        { label: "Wishlist Mobile", image: HabWishlistM },
+        { label: "Contact Desktop", image: HabContactD },
+        { label: "Contact Mobile", image: HabContactM },
+        { label: "Orders Desktop", image: HabOrdersD },
+        { label: "Orders Mobile", image: HabOrdersM },
       ],
 
+      executiveSummary:
+        "Safe Dollar Studios creates a wide range of games — from action-packed adventures to satisfying cleaning games — always striving to deliver playful experiences with fresh mechanics. The studio targets younger audiences who can enjoy games alongside their friends or parents. This website exists to highlight the studio's work, their journey, what they stand for, and the team behind it all. The company needed a dedicated space to showcase their portfolio, share their story, and give people a way to get in touch.",
+
+      keySections: [
+        "Home — introduction to the studio",
+        "Games Overview — A showcase of all the studio's games, each with a link to play",
+        "Games Individual — In-depth information per game, including screenshots and a link to the itch.io page",
+        "About Us — The studio's story, mission, values, and awards",
+        "Team — An overview of the team and their individual roles",
+        "Contact Us — Access to all social links and a direct email form",
+      ],
+
+      successCriteria: [
+        "Users can discover and access the studio's games and information",
+        "Users are motivated to play the games or contact the studio",
+        "Users can easily reach out to the studio through multiple channels",
+      ],
+
+      customerBackground:
+        "People interested in indie games often don't have easy access to the studio's work or enough information to learn more about who made it. They need a space to explore the games and understand the studio before deciding to play.",
+
+      challenges: [
+        "No existing space to showcase the studio's portfolio or share their story",
+        "No central point of contact for players or collaborators",
+      ],
+
+      mood: "The company's brand identity is built around creativity and playfulness, and the website is designed to reflect that. Interactive elements keep users engaged and intrigued as they explore. The colour palette is crafted to feel distinctive yet approachable — bold enough to stand out, warm enough to welcome. Orange is the primary accent colour: eye-catching and energetic, it communicates the studio's playful and creative spirit while maintaining a sense of professionalism.",
+
+      features: [
+        {
+          title: "Home",
+          description:
+            "The home page introduces users to the studio before they explore further. It features an image carousel showcasing the team, giving visitors a personal, human first impression of the people behind the games.",
+        },
+        {
+          title: "Games Overview",
+          description:
+            "This page was designed to give users access to all of the studio's games, with the understanding that many more titles will be added over time. A search function allows users to quickly find a specific game they're looking for, keeping navigation simple as the library grows.",
+        },
+        {
+          title: "Games Indidvidual",
+          description:
+            "Each game has its own dedicated page featuring a description of the game, screenshots, and a direct link to the itch.io page where users can download and play it.",
+        },
+        {
+          title: "Team",
+          description:
+            "The Team page is designed to give recognition to every member of the studio. It reuses the same image carousel component as the homepage, reinforcing design consistency across the site. Each team member's card flips on hover to reveal their role and a short bio.",
+        },
+        {
+          title: "Contact Us",
+          description:
+            "The Contact page provides multiple ways for users to connect with the studio. Social media links invite visitors to explore the studio's more casual, creative side through their online channels. A contact form lets users fill in their details and send a direct message to the studio — a simple and efficient way to get in touch.",
+        },
+      ],
+    },
+  },
+   {
+    id: "med",
+    title: "Now Med Website",
+    desc: "Habibi Vapes is a vape retail company whose website is designed to sell products directly to customers. The site showcases the full range of available vapes, allowing visitors to browse different options and make purchases seamlessly online.",
+    image: NowMedImg,
+    hasDetail: true,
+    links: {
+      figma: "https://www.figma.com/design/OWh0w4qioDyJxeOcg4BKL8/Habibi-Vapes?node-id=55-1636&t=NhKkXVZfan0GTy8T-1",
+    },
+
+    detail: {
       wireframes: [
-        { label: "Home Desktop Wireframe", image: SDSHomeD },
-        { label: "Home Mobile Wireframe", image: SDSHomeM },
-        { label: "Game Selection Desktop Wireframe", image: SDSGameMainD },
-        { label: "Game Selection Mobile Wireframe", image: SDSGameMainM },
-        {
-          label: "Individual Game Desktop Wireframe",
-          image: SDSGameIndividualD,
-        },
-        {
-          label: "Individual Game Mobile Wireframe",
-          image: SDSGameIndividualM,
-        },
-        { label: "About Us Desktop", image: SDSAboutD },
-        { label: "About Us Mobile", image: SDSAboutM },
-        { label: "Team Desktop", image: SDSTeamD },
-        { label: "Team Mobile", image: SDSTeamM },
-        { label: "Contact Us Desktop", image: SDSContactD },
-        { label: "Contact Us Mobile", image: SDSContactM },
+        { label: "Sign Up Desktop", image: HabSignD},
+        { label: "Sign Up Mobile", image: HabSignM },
+        { label: "Confirmation Code Desktop", image: HabConfirmationD },
+        { label: "Confirmation Code Mobile", image: HabConfirmationM },
+        { label: "Log in Desktop", image: HabLogD },
+        { label: "Log in Mobile", image: HabLogM },
+        { label: "Forgot Password Desktop", image: HabForgotD },
+        { label: "Forgot Password Mobile", image: HabForgotM },
+        { label: "Confirmation Code Desktop", image: HabConfirmationD },
+        { label: "Confirmation Code Mobile", image: HabConfirmationM },
+        { label: "Home Desktop", image: HabHomeD},
+        { label: "Home Mobile", image: HabHomeM},
+        { label: "Vapes Selection Desktop", image: HabVapesD },
+        { label: "Vapes Selection Mobile", image: HabVapesM},
+        { label: "Vape Details Desktop", image: HabVapeDetailD },
+        { label: "Vape Details Mobile", image: HabVapeDetailM },
+        { label: "Profile Desktop", image: HabProfileD},
+        { label: "Edit Profile Desktop", image: HabEditProfileD },
+        { label: "Profile Mobile", image: HabProfileM },
+        { label: "Edit Profile Mobile", image: HabEditProfileM },
+        { label: "Cart Desktop", image: HabCartD},
+        { label: "Cart Mobile", image: HabCartM },
+        { label: "Checkout Desktop", image: HabCheckoutD },
+        { label: "Checkout Mobile", image: HabCheckoutM },
+        { label: "Wishlist Desktop", image: HabWishlistD },
+        { label: "Wishlist Mobile", image: HabWishlistM },
+        { label: "Contact Desktop", image: HabContactD },
+        { label: "Contact Mobile", image: HabContactM },
+        { label: "Orders Desktop", image: HabOrdersD },
+        { label: "Orders Mobile", image: HabOrdersM },
       ],
 
       executiveSummary:
