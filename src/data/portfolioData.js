@@ -103,26 +103,72 @@ export const websites = [
         { label: "Money Wireframe", image: MoneyWireframe },
       ],
 
+      executiveSummary:
+        "Many young professionals struggle with financial decision-making — especially high earners who suddenly have significant income but lack the financial literacy to manage it effectively. This web app is a digital companion aimed at helping young professionals better understand, manage, and plan their personal finances.",
+
+      keySections: [
+        "Home — introduction and financial snapshot",
+        "Money Snapshot — detailed income, expenses, savings, and progress tracking",
+        "Strategy Trackers — guided long-term financial journeys",
+        "Simulation Lab — risk-free testing of real financial decisions",
+        "Banking DNA — personalised money personality analysis",
+      ],
+
+      successCriteria: [
+        "Customers feel more confident and in control of their financial decisions",
+        "Customers take measurable actions, such as investing and saving",
+        "Customers regularly engage with the app's tools",
+      ],
+
       customerBackground:
-        "Many high-earning young individuals in South Africa are within their first years of serious financial independence.",
+        "Many high-earning young individuals in South Africa are entering their first years of serious financial independence. They work in high-demand industries and earn well-paid salaries, yet face a significant shortfall in financial literacy and decision-making skills.",
 
       challenges: [
-        "Feeling overwhelmed with financial decisions",
-        "Tracking savings, investment, and debt",
-        "Low long-term financial planning awareness",
-        "Understanding financial jargon",
-        "Money spread across multiple platforms",
-        "Limited time due to demanding jobs",
+        "Decision overwhelm when faced with complex financial choices — investments, savings, insurance, and debt",
+        "Low confidence in long-term financial planning",
+        "Difficulty understanding financial jargon",
+        "Confusion about their overall financial position, with money spread across multiple accounts and apps",
+        "Severe time constraints due to demanding jobs",
       ],
 
       goals: [
-        "Increase adoption of investment products",
-        "Position Absa as a wealth partner",
-        "Improve financial insights",
-        "Increase engagement with young professionals",
+        "Develop a simulation lab where users can safely explore future financial outcomes",
+        "Create a personalised experience offering educational insights into finance, budgeting, and debt",
+        "Provide a clear dashboard of the user's current financial situation",
+        "Provide a guided strategy track that simplifies complex financial journeys over five years",
+        "Increase adoption of investment products among young professionals",
+        "Position Absa as a trusted wealth partner for the next generation",
       ],
 
-      mood: "Dark, modern banking interface with purple accents and yellow highlights.",
+      mood: "The interface draws in a young audience through a visually striking yet sophisticated UI. Black and purple work together to balance elegance with a contemporary edge — black conveys professionalism and authority, while purple adds vibrancy and a fresh, modern feel. Yellow accents provide energy and focus. The overall design encourages creativity in how users approach banking, making the platform feel engaging, dynamic, and inviting enough to return to regularly.",
+
+      features: [
+        {
+          title: "Home",
+          description:
+            "The home page introduces users to the app before they dive in. It displays a summary of total income, total expenses, debt balance, and a financial health score — giving users immediate access to their most critical figures at a glance.",
+        },
+        {
+          title: "Money Snapshot",
+          description:
+            "Divided into five sections: Overview, Income, Expenses, Savings, and Progress. Users can adjust income toggles across multiple sources and see a live SARS tax breakdown showing gross vs. take-home pay. The Expenses section categorises fixed costs, variable spending, and debt — each supported by percentage breakdown graphs. The Savings section tracks totals alongside TFSA limit usage. The Progress section lets users set financial goals and calculates an overall financial health score. Every section includes informational pop-ups to help users understand the concepts behind their numbers.",
+        },
+        {
+          title: "Strategy Trackers",
+          description:
+            "Three financial journeys designed to help users make clearer long-term decisions: First Property Builder, Balanced Lifestyle & Investing, and Aggressive Global Investor. The First Property Builder is fully implemented as a five-step guided journey toward home ownership, broken into focused stages so users aren't overwhelmed. The other two tracks are currently under development.",
+        },
+        {
+          title: "Simulation Lab",
+          description:
+            "A space where users can test financial decisions before making them in real life. The Property vs. Renting in Joburg simulator lets users adjust buying and renting variables to generate a comparative table graph and a 'studio verdict' recommending the better financial choice. The Luxury Car vs. Investing the Difference and Local vs. Offshore Investing simulators are under construction, clearly marked as such. Information pop-ups throughout ensure users understand every variable they're adjusting.",
+        },
+        {
+          title: "Banking DNA",
+          description:
+            "A personalised quiz that analyses a user's spending habits, saving patterns, and goal consistency to reveal their money personality. After completing a series of questions, users see their archetype, their current financial 'level', and actionable advice on how to level up. This section was designed to motivate users — whether to maintain strong habits or to begin improving their financial behaviours.",
+        },
+      ],
     },
   },
   {
@@ -130,14 +176,14 @@ export const websites = [
     title: "Safe Dollar Studios Website",
     desc: "Safe Dollar Studios is a game design company. The website showcases the studio's creative portfolio and the team behind its work. Visitors can explore the company's completed projects, learn about the designers and developers on staff, and get a clear sense of the studio's creative vision and expertise.",
     image: SDSImg,
-    hasDetail: false,
+    hasDetail: true,
   },
   {
     id: "habibi",
     title: "Habibi Vapes Website",
     desc: "Habibi Vapes is a vape retail company whose website is designed to sell products directly to customers. The site showcases the full range of available vapes, allowing visitors to browse different options and make purchases seamlessly online.",
     image: HabibiImg,
-    hasDetail: false,
+    hasDetail: true,
   },
 ];
 export const gameUIs = [

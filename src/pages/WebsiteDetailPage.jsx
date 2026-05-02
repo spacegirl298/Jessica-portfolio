@@ -75,6 +75,32 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
           ))}
         </div>
 
+        {/* OVERVIEW */}
+        <p className="detail-section-title">Project Overview</p>
+
+        <div className="design-decisions">
+          <div className="decision-col">
+            <h3>Executive Summary</h3>
+            <p>{detail.executiveSummary}</p>
+
+            <h4>Key Sections</h4>
+            <ul>
+              {detail.keySections.map((s, i) => (
+                <li key={i}>{s}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="decision-col">
+            <h3>Success Criteria</h3>
+            <ul>
+              {detail.successCriteria.map((s, i) => (
+                <li key={i}>{s}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         {/* DESIGN */}
         <p className="detail-section-title">Design Decisions</p>
 
@@ -104,10 +130,26 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
           </div>
         </div>
 
+        {/* FEATURE BREAKDOWN */}
+        <p className="detail-section-title">Feature Breakdown</p>
+
+        <div className="feature-breakdown">
+          {detail.features.map((feature, i) => (
+            <div className="feature-item" key={i}>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
         {/* BUTTONS */}
         <div className="detail-links">
-          < a href = "https://github.com/spacegirl298/nextgen_wealth_studio" target = "_blank"><button className="btn-view">WEBSITE</button></a>
-          <a href = "https://www.figma.com/design/MrsMHkPHUhok1AzhASbtmk/IM-website?node-id=169-2&t=uEVfiEuHN4R234MK-1" target = "_blank"><button className="btn-view">FIGMA</button></a>
+          <a href="https://github.com/spacegirl298/nextgen_wealth_studio" target="_blank" rel="noreferrer">
+            <button className="btn-view">WEBSITE</button>
+          </a>
+          <a href="https://www.figma.com/design/MrsMHkPHUhok1AzhASbtmk/IM-website?node-id=169-2&t=uEVfiEuHN4R234MK-1" target="_blank" rel="noreferrer">
+            <button className="btn-view">FIGMA</button>
+          </a>
         </div>
 
       </div>
