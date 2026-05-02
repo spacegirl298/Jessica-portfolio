@@ -1,4 +1,5 @@
-import { websites } from "../data/portfolioData"; // ← add this
+import { websites } from "../data/portfolioData"; 
+import Footer from "../components/Footer"; // ← add this
 
 export default function WebsiteDetailPage({ siteId, navigate }) {
   const site = websites.find((s) => s.id === siteId);
