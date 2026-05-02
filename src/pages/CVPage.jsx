@@ -7,19 +7,72 @@ export default function CVPage() {
       <div className="page-hero">
         <h1>CV</h1>
       </div>
-       <div className="hero-line"></div>
+      <div className="hero-line"></div>
 
       <div className="cv-page">
         <div className="cv-section">
           <h2>Experience</h2>
 
           <div className="cv-entry">
+            <h3>Lecturer & UI Designer</h3>
+            <p className="cv-meta">Digital Creators Lab · 2026</p>
+            <p>
+              Taught children coding and game/app development over a two-day
+              workshop. Contributed to lecture planning and deisgned the UI for
+              the learning app.
+            </p>
+          </div>
+
+          <div className="cv-entry">
+            <h3>Ctrl.Collective</h3>
+            <p className="cv-meta">
+              Social Media Manager (Founding Contributor) · 2026 – present
+            </p>
+            <p>
+              Launched and manage the social media presence for Johannesburg
+              game dev meetups. Build online visibility, showcase local
+              talent, and promote events held every second Thursday of the
+              month.
+            </p>
+          </div>
+
+          <div className="cv-entry">
             <h3>Social Media Manager</h3>
             <p className="cv-meta">Safe Dollar Studios · 2025 – present</p>
             <p>
-              Managing and growing the company’s social media presence across multiple platforms,
-              driving audience engagement and community growth. Assisting with art production,
-              including concept design, asset creation and visual consistency across projects.
+              Manage and grow social media presence across multiple platforms,
+              driving audience engagement and community growth. Represented the
+              studio at events including Joburg Games Fest, Africa Games Week,
+              The Resistance Fair, and AviJozi. Assist with art production,
+              including concept design, asset creation, and visual consistency
+              across projects.
+            </p>
+          </div>
+
+          <div className="cv-entry">
+            <h3>Pet Sitter</h3>
+            <p className="cv-meta">Caity Cares Pet Sitting · 2026 – present</p>
+            <p>
+              Provide in-home pet care, ensuring the safety and well-being of
+              clients' animals.
+            </p>
+          </div>
+
+          <div className="cv-entry">
+            <h3>Stylist</h3>
+            <p className="cv-meta">Mighty Fine (Dove Ad) · 2026</p>
+            <p>
+              Curated outfits for four talent participants in a Dove commercial
+              advertisement.
+            </p>
+          </div>
+
+          <div className="cv-entry">
+            <h3>Event & Social Media Planning</h3>
+            <p className="cv-meta">The Campus Game Jam · 2026 - present</p>
+            <p>
+              Assist in planning social media strategy and event logistics for
+              game jams where designers create games over several hours or days.
             </p>
           </div>
 
@@ -27,8 +80,9 @@ export default function CVPage() {
             <h3>Social Media Manager</h3>
             <p className="cv-meta">Press Start Mzansi · 2025</p>
             <p>
-              Created, scheduled, and managed content calendars ensuring consistent brand messaging.
-              Led and managed a team of 3 content creators to deliver social media posts.
+              Managed content calendar and social media scheduling for a startup
+              podcast focused on business and gaming. Led and managed a team of
+              three content creators to deliver consistent brand messaging.
             </p>
           </div>
 
@@ -36,17 +90,20 @@ export default function CVPage() {
             <h3>Social Media Manager</h3>
             <p className="cv-meta">Joburg Games Fest · 2025</p>
             <p>
-              Led a team of four in driving the company’s online presence and engagement.
-              Developed and implemented strategic content plans tailored for the upcoming event.
+              Led a team of four to drive the company's online presence and
+              engagement for a three-day event showcasing South African games.
+              Developed and implemented strategic content plans tailored for the
+              event, and covered live social media during the festival.
             </p>
           </div>
 
           <div className="cv-entry">
-            <h3>Promotional Model</h3>
-            <p className="cv-meta">Volvo</p>
+            <h3>Social Media Manager</h3>
+            <p className="cv-meta">Games Week Geeks · 2025</p>
             <p>
-              Worked as a promotional brand ambassador for Volvo Cars, where I handled administrative
-              tasks and engaged with customers about the vehicles.
+              Curated posting timelines and video ideas for Africa Games Week.
+              Filmed and edited videos and posts. Represented Safe Dollar
+              Studios at the event, showcasing their games.
             </p>
           </div>
 
@@ -54,7 +111,65 @@ export default function CVPage() {
             <h3>Designer</h3>
             <p className="cv-meta">Little Kickers</p>
             <p>
-              Designed a calendar, blending functionality with a playful, childlike touch.
+              Designed a calendar, blending functionality with a playful,
+              childlike touch.
+            </p>
+          </div>
+        </div>
+
+        <div className="cv-entry">
+          <h3>Promotional Model</h3>
+          <p className="cv-meta">Volvo · 2024</p>
+          <p>
+            Handled administrative tasks and engaged with customers about
+            vehicles.
+          </p>
+          <p className="cv-meta">MTN · 2024</p>
+          <p>
+            Guided attendees through an end-of-year event, distributed
+            wristbands, and handled various on-site tasks.
+          </p>
+          <p className="cv-meta">KZN Summer · 2022</p>
+          <p>Distributed flyers and promoted the event to attendees.</p>
+        </div>
+
+        <div className="cv-section">
+          <h2>Free Lance Work</h2>
+          <div className="cv-entry">
+            <h3>Log Designer</h3>
+
+            <p>Provided logo design services for various clients.</p>
+          </div>
+        </div>
+
+        <div className="cv-section">
+          <h2>Volunteer Experience</h2>
+          <div className="cv-entry">
+            <h3>BA Digital Arts Department Parties</h3>
+            <p className="cv-meta">2024, 2025</p>
+            <p>
+              Helped plan department parties, including fundraising, event
+              planning, and on-the-day coordination.
+            </p>
+          </div>
+          <div className="cv-entry">
+            <h3>Joburg Games Fest</h3>
+            <p className="cv-meta">2024</p>
+            <p>
+              Assisted with event setup and worked front desk, managing attendee
+              entry.
+            </p>
+          </div>
+        </div>
+
+        <div className="cv-section">
+          <h2>Speaking Engagement</h2>
+          <div className="cv-entry">
+            <h3>"3 Jobs, 1 Degree"</h3>
+            <p className="cv-meta">2025</p>
+            <p>
+              Delivered a talk on balancing three jobs while pursuing a
+              full-time university degree at the Joburg Games Fest.
             </p>
           </div>
         </div>
@@ -63,15 +178,10 @@ export default function CVPage() {
           <h2>Education</h2>
           <div className="cv-entry">
             <h3>Bachelor of Arts in Digital Arts</h3>
-            <p className="cv-meta">University of the Witwatersrand · 2023 – 2026</p>
-            <p>Majoring in Game Design and Interactive Media</p>
-          </div>
-        </div>
-
-        <div className="cv-section">
-          <h2>Skills</h2>
-          <div className="cv-entry">
-            <p>Communication, Team Leadership, Creative Problem Solving, Social Media Marketing, Graphic Design, Visual Communication</p>
+            <p className="cv-meta">
+              University of the Witwatersrand · 2023 – 2026
+            </p>
+            <p>Professional Degree | Majoring in Game Design and Interactive Media</p>
           </div>
         </div>
 
@@ -79,7 +189,10 @@ export default function CVPage() {
           <h2>Certifications</h2>
           <div className="cv-entry">
             <h3>Udemy Digital Marketing</h3>
-            <p>Short course in mastery of market research, branding, funnels, copywriting, SEO, content and social media marketing, ChatGPT</p>
+            <p>
+              Short course in mastery of market research, branding, funnels,
+              copywriting, SEO, content and social media marketing, ChatGPT
+            </p>
           </div>
         </div>
 
@@ -89,8 +202,6 @@ export default function CVPage() {
             <p>English</p>
           </div>
         </div>
-
-        
       </div>
 
       <div className="divider" />

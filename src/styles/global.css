@@ -170,6 +170,7 @@ body {
   transform-origin: left;
   transition: transform var(--t-mid);
   z-index: 0;
+  
 }
 
 /* Gold outline */

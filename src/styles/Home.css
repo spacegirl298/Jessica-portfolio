@@ -73,6 +73,7 @@
   align-self: center;
   position: relative;
   z-index: 5;
+  margin-top: 10rem;
   margin-left: 200px;
   animation: slideInLeft 0.65s ease 0.25s both;
 }
@@ -80,7 +81,7 @@
 .home-tags span {
   font-family: "Oswald", sans-serif;
 
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--text);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -122,9 +123,6 @@
   filter: sepia(0.05) contrast(1.1) brightness(1.04);
 }
 
-.home-right {
-
-}
 
 
 .home-big-title {
