@@ -6,7 +6,6 @@ import "../styles/Portfolio.css";
 
 export default function GameUIPage({ navigate }) {
   return (
-    
     <>
       <div className="page-hero">
         <h1 className="large-title">GAME UI</h1>

@@ -1,23 +1,58 @@
-import { websites } from "../data/portfolioData"; 
-import Footer from "../components/Footer"; // ← add this
+import { useState, useEffect, useCallback } from "react";
+import { websites } from "../data/portfolioData";
+import Footer from "../components/Footer";
 
 export default function WebsiteDetailPage({ siteId, navigate }) {
   const site = websites.find((s) => s.id === siteId);
 
+  // Lightbox state
+  const [lightbox, setLightbox] = useState(null); // { images: [], index: 0 }
+
+  const openLightbox = (images, index) => {
+    setLightbox({ images, index });
+  };
+
+  const closeLightbox = () => setLightbox(null);
+
+  const goPrev = useCallback(() => {
+    setLightbox((lb) => ({
+      ...lb,
+      index: (lb.index - 1 + lb.images.length) % lb.images.length,
+    }));
+  }, []);
+
+  const goNext = useCallback(() => {
+    setLightbox((lb) => ({
+      ...lb,
+      index: (lb.index + 1) % lb.images.length,
+    }));
+  }, []);
+
+  // Keyboard navigation
+  useEffect(() => {
+    if (!lightbox) return;
+    const handleKey = (e) => {
+      if (e.key === "ArrowLeft") goPrev();
+      else if (e.key === "ArrowRight") goNext();
+      else if (e.key === "Escape") closeLightbox();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightbox, goPrev, goNext]);
+
+  // Prevent body scroll when lightbox open
+  useEffect(() => {
+    document.body.style.overflow = lightbox ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [lightbox]);
+
   if (!site || !site.detail) {
     return (
       <>
-        <button
-          className="back-btn"
-          onClick={() => navigate("portfolio", "websites")}
-        >
+        <button className="back-btn" onClick={() => navigate("portfolio", "websites")}>
           ← Back to Websites
         </button>
-
-        <div className="page-hero">
-          <h1>Not Found</h1>
-        </div>
-
+        <div className="page-hero"><h1>Not Found</h1></div>
         <Footer />
       </>
     );
@@ -25,12 +60,28 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
 
   const { detail } = site;
 
+  // Build a combined images array for cross-section navigation
+  const screenshotImages = (detail.screenshots || []).map((item, idx) => ({
+    image: item.image,
+    label: item.label,
+    figureNumber: idx + 1,
+    sectionLabel: "Screenshot",
+  }));
+
+  const wireframeImages = (detail.wireframes || []).map((item, idx) => ({
+    image: item.image,
+    label: item.label,
+    figureNumber: (detail.screenshots?.length || 0) + idx + 1,
+    sectionLabel: "Wireframe",
+  }));
+
+  const allImages = [...screenshotImages, ...wireframeImages];
+
+  const currentItem = lightbox ? lightbox.images[lightbox.index] : null;
+
   return (
     <>
-      <button
-        className="back-btn"
-        onClick={() => navigate("portfolio", "websites")}
-      >
+      <button className="back-btn" onClick={() => navigate("portfolio", "websites")}>
         ← Back to Websites
       </button>
 
@@ -41,14 +92,22 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
       <div className="detail-page">
 
         {/* SCREENSHOTS */}
-        {detail.screenshots && detail.screenshots.length > 0 && (
+        {screenshotImages.length > 0 && (
           <>
             <p className="detail-section-title">Website Screenshots</p>
             <div className="screenshots-grid">
-              {detail.screenshots.map((item, idx) => (
-                <div className="screenshot-box" key={idx}>
+              {screenshotImages.map((item, idx) => (
+                <div
+                  className="screenshot-box"
+                  key={idx}
+                  onClick={() => openLightbox(allImages, idx)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && openLightbox(allImages, idx)}
+                >
                   <img src={item.image} alt={item.label} />
-                  <span>FIGURE {idx + 1}: {item.label}</span>
+                  <span>FIGURE {item.figureNumber}: {item.label}</span>
+                  <div className="screenshot-hover-hint">🔍 View</div>
                 </div>
               ))}
             </div>
@@ -56,16 +115,27 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
         )}
 
         {/* WIREFRAMES */}
-        {detail.wireframes && detail.wireframes.length > 0 && (
+        {wireframeImages.length > 0 && (
           <>
             <p className="detail-section-title">Figma Wireframes</p>
             <div className="screenshots-grid">
-              {detail.wireframes.map((item, idx) => (
-                <div className="screenshot-box" key={idx}>
-                  <img src={item.image} alt={item.label} />
-                  <span>FIGURE {detail.screenshots?.length + idx + 1}: {item.label}</span>
-                </div>
-              ))}
+              {wireframeImages.map((item, idx) => {
+                const globalIdx = screenshotImages.length + idx;
+                return (
+                  <div
+                    className="screenshot-box"
+                    key={idx}
+                    onClick={() => openLightbox(allImages, globalIdx)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === "Enter" && openLightbox(allImages, globalIdx)}
+                  >
+                    <img src={item.image} alt={item.label} />
+                    <span>FIGURE {item.figureNumber}: {item.label}</span>
+                    <div className="screenshot-hover-hint">🔍 View</div>
+                  </div>
+                );
+              })}
             </div>
           </>
         )}
@@ -78,26 +148,20 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
               <div className="decision-col">
                 <h3>Executive Summary</h3>
                 <p>{detail.executiveSummary}</p>
-
                 {detail.keySections && (
                   <>
                     <h4>Key Sections</h4>
                     <ul>
-                      {detail.keySections.map((s, i) => (
-                        <li key={i}>{s}</li>
-                      ))}
+                      {detail.keySections.map((s, i) => <li key={i}>{s}</li>)}
                     </ul>
                   </>
                 )}
               </div>
-
               {detail.successCriteria && (
                 <div className="decision-col">
                   <h3>Success Criteria</h3>
                   <ul>
-                    {detail.successCriteria.map((s, i) => (
-                      <li key={i}>{s}</li>
-                    ))}
+                    {detail.successCriteria.map((s, i) => <li key={i}>{s}</li>)}
                   </ul>
                 </div>
               )}
@@ -117,31 +181,24 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
                     <p>{detail.customerBackground}</p>
                   </>
                 )}
-
                 {detail.challenges && (
                   <>
                     <h4>Challenges</h4>
                     <ul>
-                      {detail.challenges.map((c, i) => (
-                        <li key={i}>{c}</li>
-                      ))}
+                      {detail.challenges.map((c, i) => <li key={i}>{c}</li>)}
                     </ul>
                   </>
                 )}
               </div>
-
               <div className="decision-col">
                 {detail.goals && (
                   <>
                     <h3>Product Goals</h3>
                     <ul>
-                      {detail.goals.map((g, i) => (
-                        <li key={i}>{g}</li>
-                      ))}
+                      {detail.goals.map((g, i) => <li key={i}>{g}</li>)}
                     </ul>
                   </>
                 )}
-
                 {detail.mood && (
                   <>
                     <h4>Visual Mood</h4>
@@ -153,7 +210,7 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
           </>
         )}
 
-        {/* FEATURE BREAKDOWN - THIS IS WHERE THE ERROR WAS */}
+        {/* FEATURE BREAKDOWN */}
         {detail.features && detail.features.length > 0 && (
           <>
             <p className="detail-section-title">Feature Breakdown</p>
@@ -186,6 +243,54 @@ export default function WebsiteDetailPage({ siteId, navigate }) {
 
       <div className="divider" />
       <Footer />
+
+      {/* LIGHTBOX OVERLAY */}
+      {lightbox && currentItem && (
+        <div className="lightbox-overlay" onClick={closeLightbox}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+
+            {/* Close */}
+            <button className="lightbox-close" onClick={closeLightbox} aria-label="Close">✕</button>
+
+            {/* Image */}
+            <div className="lightbox-img-wrap">
+              <img src={currentItem.image} alt={currentItem.label} />
+            </div>
+
+            {/* Caption */}
+            <div className="lightbox-caption">
+              <span className="lightbox-section-tag">{currentItem.sectionLabel}</span>
+              <p className="lightbox-label">FIGURE {currentItem.figureNumber}: {currentItem.label}</p>
+            </div>
+
+            {/* Navigation */}
+            {lightbox.images.length > 1 && (
+              <div className="lightbox-nav">
+                <button className="lightbox-arrow" onClick={goPrev} aria-label="Previous">←</button>
+                <span className="lightbox-counter">
+                  {lightbox.index + 1} / {lightbox.images.length}
+                </span>
+                <button className="lightbox-arrow" onClick={goNext} aria-label="Next">→</button>
+              </div>
+            )}
+
+            {/* Dot indicators */}
+            {lightbox.images.length > 1 && (
+              <div className="lightbox-dots">
+                {lightbox.images.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`lightbox-dot${i === lightbox.index ? " active" : ""}`}
+                    onClick={() => setLightbox((lb) => ({ ...lb, index: i }))}
+                    aria-label={`Go to image ${i + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+
+          </div>
+        </div>
+      )}
     </>
   );
 }

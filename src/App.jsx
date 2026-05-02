@@ -12,6 +12,7 @@ import GameUIPage      from "./pages/GameUIPage";
 import GameDetailPage  from "./pages/GameDetailPage";
 import LogoPage        from "./pages/LogoPage";
 import DrawingsPage    from "./pages/DrawingsPage";
+import SocialMediaPage from "./pages/SocialMediaPage";
 
 import "./styles/global.css";
 
@@ -53,6 +54,7 @@ export default function App() {
           case "gameui":    return <GameUIPage   navigate={navigate} />;
           case "logo":      return <LogoPage />;
           case "drawings":  return <DrawingsPage />;
+          case "social media": return <SocialMediaPage/>;
           default:          return <WebsitesPage navigate={navigate} />;
         }
 

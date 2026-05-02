@@ -1,40 +1,142 @@
 // DrawingsPage.jsx
 
+import { useState, useEffect, useCallback } from "react";
 import Footer from "../components/Footer";
 import { digitalDrawings } from "../data/portfolioData";
 import "../styles/Portfolio.css";
 
 export default function DrawingsPage() {
+  const allImages = digitalDrawings.map((drawing) => ({
+      image: drawing.image,
+      label: drawing.title,
+      sectionLabel: "Digital Drawing",
+    }));
+  
+    // Lightbox state
+    const [lightbox, setLightbox] = useState(null); // { images: [], index: 0 }
+  
+    const openLightbox = (index) => {
+      setLightbox({ images: allImages, index });
+    };
+  
+    const closeLightbox = () => setLightbox(null);
+  
+    const goPrev = useCallback(() => {
+      setLightbox((lb) => ({
+        ...lb,
+        index: (lb.index - 1 + lb.images.length) % lb.images.length,
+      }));
+    }, []);
+  
+    const goNext = useCallback(() => {
+      setLightbox((lb) => ({
+        ...lb,
+        index: (lb.index + 1) % lb.images.length,
+      }));
+    }, []);
+  
+    // Keyboard navigation
+    useEffect(() => {
+      if (!lightbox) return;
+      const handleKey = (e) => {
+        if (e.key === "ArrowLeft") goPrev();
+        else if (e.key === "ArrowRight") goNext();
+        else if (e.key === "Escape") closeLightbox();
+      };
+      window.addEventListener("keydown", handleKey);
+      return () => window.removeEventListener("keydown", handleKey);
+    }, [lightbox, goPrev, goNext]);
+  
+    // Prevent body scroll when lightbox open
+    useEffect(() => {
+      document.body.style.overflow = lightbox ? "hidden" : "";
+      return () => { document.body.style.overflow = ""; };
+    }, [lightbox]);
+  
+    const currentItem = lightbox ? lightbox.images[lightbox.index] : null;
   return (
     <>
       <div className="page-hero">
-        <h1 className="large-title">Digital Drawings</h1>
-      </div>
-
-      <div className="drawing-list">
-        {digitalDrawings.map((drawing) => (
-          <div
-            key={drawing.id}
-            className={`drawing-item${drawing.reverse ? " reverse" : ""}`}
-          >
-            <div className="drawing-img">
-              <img
-                src={drawing.image}
-                alt={drawing.title}
-                className="about-photo-placeholder"
-              />
+              <h1 className="large-title">Digital Drawing</h1>
             </div>
-
-            <div className="drawing-text">
-              <h2>{drawing.title}</h2>
-              <p>{drawing.desc}</p>
+      
+            <div className="logo-list">
+              {digitalDrawings.map((drawing, idx) => (
+                <div
+                  key={drawing.id}
+                  className={`drawing-item${drawing.reverse ? " reverse" : ""}`}
+                >
+                  <div
+                    className="drawing-img drawing-img--clickable"
+                    onClick={() => openLightbox(idx)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === "Enter" && openLightbox(idx)}
+                  >
+                    <img
+                      src={drawing.image}
+                      alt={drawing.title}
+                    />
+                    
+                  </div>
+      
+                  <div className="drawing-text">
+                    <h2>{drawing.title}</h2>
+                    <p>{drawing.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-        ))}
-      </div>
 
       <div className="divider" />
       <Footer />
+       {/* LIGHTBOX OVERLAY */}
+      {lightbox && currentItem && (
+        <div className="lightbox-overlay" onClick={closeLightbox}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+
+            {/* Close */}
+            <button className="lightbox-close" onClick={closeLightbox} aria-label="Close">✕</button>
+
+            {/* Image */}
+            <div className="lightbox-img-wrap">
+              <img src={currentItem.image} alt={currentItem.label} />
+            </div>
+
+            {/* Caption */}
+            <div className="lightbox-caption">
+              <span className="lightbox-section-tag">{currentItem.sectionLabel}</span>
+              <p className="lightbox-label">{currentItem.label}</p>
+            </div>
+
+            {/* Navigation */}
+            {lightbox.images.length > 1 && (
+              <div className="lightbox-nav">
+                <button className="lightbox-arrow" onClick={goPrev} aria-label="Previous">←</button>
+                <span className="lightbox-counter">
+                  {lightbox.index + 1} / {lightbox.images.length}
+                </span>
+                <button className="lightbox-arrow" onClick={goNext} aria-label="Next">→</button>
+              </div>
+            )}
+
+            {/* Dot indicators */}
+            {lightbox.images.length > 1 && (
+              <div className="lightbox-dots">
+                {lightbox.images.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`lightbox-dot${i === lightbox.index ? " active" : ""}`}
+                    onClick={() => setLightbox((lb) => ({ ...lb, index: i }))}
+                    aria-label={`Go to image ${i + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+
+          </div>
+        </div>
+      )}
     </>
   );
 }
