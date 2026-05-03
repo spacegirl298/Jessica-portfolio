@@ -30,9 +30,8 @@ export default function CVPage() {
             </p>
             <p>
               Launched and manage the social media presence for Johannesburg
-              game dev meetups. Build online visibility, showcase local
-              talent, and promote events held every second Thursday of the
-              month.
+              game dev meetups. Build online visibility, showcase local talent,
+              and promote events held every second Thursday of the month.
             </p>
           </div>
 
@@ -160,6 +159,16 @@ export default function CVPage() {
               entry.
             </p>
           </div>
+          <div className="cv-entry">
+            <h3>LinkedIn Profile & Content Advisor</h3>
+            <p className="cv-meta">2024</p>
+            <p>
+              Researched LinkedIn analytics and industry-specific content
+              strategies to understand what drives engagement, then helped
+              multiple individuals curate their profiles and optimize their
+              posting habits to improve their professional visibility.
+            </p>
+          </div>
         </div>
 
         <div className="cv-section">
@@ -181,7 +190,10 @@ export default function CVPage() {
             <p className="cv-meta">
               University of the Witwatersrand · 2023 – 2026
             </p>
-            <p>Professional Degree | Majoring in Game Design and Interactive Media</p>
+            <p>
+              Professional Degree | Majoring in Game Design and Interactive
+              Media
+            </p>
           </div>
         </div>
 

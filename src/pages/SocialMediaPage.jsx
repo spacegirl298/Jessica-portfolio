@@ -1,40 +1,40 @@
-// GameUIPage.jsx
-
 import Footer from "../components/Footer";
-import { gameUIs } from "../data/portfolioData";
+import { socialMedia } from "../data/portfolioData";
 import "../styles/Portfolio.css";
 
-export default function GameUIPage({ navigate }) {
+export default function SocialPage({ navigate }) {
   return (
     <>
       <div className="page-hero">
-        <h1 className="large-title">GAME UI</h1>
+        <h1 className="large-title">Social Media</h1>
       </div>
 
-      <div className="gameui-list">
-        {gameUIs.map((game, i) => (
+      <div className="portfolio-list">
+        {socialMedia.map((site, i) => (
           <div
-            key={game.id}
-            className={`gameui-item${i % 2 === 1 ? " reverse" : ""}`}
+            key={site.id}
+            className={`portfolio-item${i % 2 === 1 ? " reverse" : ""}`}
           >
-            <div className="gameui-img">
+            <div className="portfolio-img">
               <img
-                src={game.image}
-                alt={game.title}
+                src={site.image}
+                alt={site.title}
                 className="about-photo-placeholder"
               />
             </div>
 
-            <div className="gameui-text">
-              <h2>{game.title}</h2>
-              <p>{game.desc}</p>
+            <div className="portfolio-text">
+              <h2>{site.title}</h2>
+              <p>{site.desc}</p>
 
-              <button
-                className="btn-view"
-                onClick={() => navigate("game-detail", game.id)}
-              >
-                VIEW
-              </button>
+              {site.hasDetail && (
+                <button
+                  className="btn-view"
+                  onClick={() => navigate("social-detail", site.id)}
+                >
+                  VIEW
+                </button>
+              )}
             </div>
           </div>
         ))}

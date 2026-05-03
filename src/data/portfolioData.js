@@ -2,7 +2,7 @@
 import ABSAIMg from "../assets/ABSACover.png";
 import SDSImg from "../assets/SDSImg.png";
 import HabibiImg from "../assets/HabibiImg.png";
-import NowMedImg from "../assets/NowMedCover.png"
+import NowMedImg from "../assets/NowMedCover.png";
 
 //Logo
 import TapImg from "../assets/TapImg.jpg";
@@ -20,6 +20,12 @@ import PenguinImg from "../assets/SirPenguinImg.PNG";
 import EsquirelImg from "../assets/EsquirelImg.png";
 import DesiresImg from "../assets/DesiresImg.png";
 import ColdImg from "../assets/ColdImg.PNG";
+
+//Social Media 
+import JGFLogo from "../assets/SocialMedia/JGFLogo.jpg";
+import SDSLogo from "../assets/SocialMedia/SDSLogo.jpg";
+import GWGLogo from "../assets/SocialMedia/GWGLogo.jpg";
+import PSMLogo from "../assets/SocialMedia/PSMLogo.jpg";
 
 //ABSA Screenshot
 import BankingDNA from "../assets/ABSA/BankingDNA.png";
@@ -353,12 +359,13 @@ export const websites = [
     image: HabibiImg,
     hasDetail: true,
     links: {
-      figma: "https://www.figma.com/design/OWh0w4qioDyJxeOcg4BKL8/Habibi-Vapes?node-id=55-1636&t=NhKkXVZfan0GTy8T-1",
+      figma:
+        "https://www.figma.com/design/OWh0w4qioDyJxeOcg4BKL8/Habibi-Vapes?node-id=55-1636&t=NhKkXVZfan0GTy8T-1",
     },
 
     detail: {
       wireframes: [
-        { label: "Sign Up Desktop", image: HabSignD},
+        { label: "Sign Up Desktop", image: HabSignD },
         { label: "Sign Up Mobile", image: HabSignM },
         { label: "Confirmation Code Desktop", image: HabConfirmationD },
         { label: "Confirmation Code Mobile", image: HabConfirmationM },
@@ -368,17 +375,17 @@ export const websites = [
         { label: "Forgot Password Mobile", image: HabForgotM },
         { label: "Confirmation Code Desktop", image: HabConfirmationD },
         { label: "Confirmation Code Mobile", image: HabConfirmationM },
-        { label: "Home Desktop", image: HabHomeD},
-        { label: "Home Mobile", image: HabHomeM},
+        { label: "Home Desktop", image: HabHomeD },
+        { label: "Home Mobile", image: HabHomeM },
         { label: "Vapes Selection Desktop", image: HabVapesD },
-        { label: "Vapes Selection Mobile", image: HabVapesM},
+        { label: "Vapes Selection Mobile", image: HabVapesM },
         { label: "Vape Details Desktop", image: HabVapeDetailD },
         { label: "Vape Details Mobile", image: HabVapeDetailM },
-        { label: "Profile Desktop", image: HabProfileD},
+        { label: "Profile Desktop", image: HabProfileD },
         { label: "Edit Profile Desktop", image: HabEditProfileD },
         { label: "Profile Mobile", image: HabProfileM },
         { label: "Edit Profile Mobile", image: HabEditProfileM },
-        { label: "Cart Desktop", image: HabCartD},
+        { label: "Cart Desktop", image: HabCartD },
         { label: "Cart Mobile", image: HabCartM },
         { label: "Checkout Desktop", image: HabCheckoutD },
         { label: "Checkout Mobile", image: HabCheckoutM },
@@ -447,36 +454,37 @@ export const websites = [
       ],
     },
   },
-   {
+  {
     id: "med",
     title: "Now Med Website",
     desc: "Habibi Vapes is a vape retail company whose website is designed to sell products directly to customers. The site showcases the full range of available vapes, allowing visitors to browse different options and make purchases seamlessly online.",
     image: NowMedImg,
     hasDetail: true,
     links: {
-      figma: "https://www.figma.com/design/OWh0w4qioDyJxeOcg4BKL8/Habibi-Vapes?node-id=55-1636&t=NhKkXVZfan0GTy8T-1",
+      figma:
+        "https://www.figma.com/design/OWh0w4qioDyJxeOcg4BKL8/Habibi-Vapes?node-id=55-1636&t=NhKkXVZfan0GTy8T-1",
     },
 
     detail: {
       wireframes: [
-        { label: "Log in Mobile", image: MedLogM},
+        { label: "Log in Mobile", image: MedLogM },
         { label: "Log in Desktop", image: MedLogD },
-        { label: "Patient Sign Up Mobile", image: MedSignPatientM},
+        { label: "Patient Sign Up Mobile", image: MedSignPatientM },
         { label: "Patient Sign Up Desktop", image: MedSignPatientD },
         { label: "Secretary Sign Up Mobile", image: MedSecretaryM },
         { label: "Secretary Sign Up Desktop", image: MedSecretaryD },
         { label: "Verification Email Mobile", image: MedEmailM },
         { label: "Verification Email Desktop", image: MedEmailD },
         { label: "Patient Dashboard Mobile", image: MedPatientM },
-        { label: "Patient Dashboard Desktop", image: MedPatientD},
-        { label: "Secretary Dashboard Mobile", image: MedSecretaryM},
-        { label: "Secretary Dashboard Desktop", image: MedSecretaryD},
-        { label: "Patient Book Appointment Mobile", image: MedBookM},
-        { label: "Patient Select Appointment Time Mobile", image: MedTimeM},
-        { label: "Patient Confirm Booking Mobile", image: MedBookM},
+        { label: "Patient Dashboard Desktop", image: MedPatientD },
+        { label: "Secretary Dashboard Mobile", image: MedSecretaryM },
+        { label: "Secretary Dashboard Desktop", image: MedSecretaryD },
+        { label: "Patient Book Appointment Mobile", image: MedBookM },
+        { label: "Patient Select Appointment Time Mobile", image: MedTimeM },
+        { label: "Patient Confirm Booking Mobile", image: MedBookM },
         { label: "Patient Booking Confirmed Mobile", image: MedConfirmBookM },
-        { label: "Notifications Mobile", image: MedNotificationM},
-        { label: "Delay Mobile", image: MedDelayM},
+        { label: "Notifications Mobile", image: MedNotificationM },
+        { label: "Delay Mobile", image: MedDelayM },
       ],
 
       executiveSummary:
@@ -664,5 +672,84 @@ export const digitalDrawings = [
     desc: "A digital illustration created for a card game of strategy and battle. This powerful card features a squirrel clad in detailed knight's armor and ready for combat. This tiny warrior symbolises unexpected strength and cleverness.",
     image: EsquirelImg,
     reverse: false,
+  },
+];
+
+export const socialMedia = [
+  {
+    id: "sds",
+    title: "Safe Dollar Studios",
+    desc: "Broken Bonds is a narrative-driven game where players step into the stitched shoes of a once-beloved teddy bear, torn from its rightful owner by a troubled brother and locked away in a room that feels more like a prison. I designed the assets and UI for this project.",
+    hasDetail: true,
+    image: SDSLogo,
+    links:{
+      social: "https://github.com/spacegirl298/nextgen_wealth_studio",
+    },
+   
+    detail:{
+    screenshots: [
+      { label: "Main Menu", image: BBComplete },
+      { label: "Controller UI", image: BBController },
+      { label: "Keyboard UI", image: BBKeyboard },
+      { label: "Broken Bonds Scene", image: BrokenBonds },
+    ],
+  }
+  },
+
+  {
+    id: "gwg",
+    title: "Games Week Geeks",
+    desc: "Colour Chase is a two-player arcade-style game featuring multiple mini-games within a single experience. I designed the entire user interface across all mini-games, using a cohesive pixel art aesthetic to unify the fast-paced, competitive gameplay.",
+    hasDetail: true,
+    image: GWGLogo,
+    links:{
+      social: "https://github.com/spacegirl298/nextgen_wealth_studio",
+    },
+    
+    detail:{
+    screenshots: [
+      { label: "Background", image: CCBg },
+      { label: "Key Controls", image: CCKeys },
+      { label: "Room Scene", image: CCRoom },
+      { label: "Game Logo", image: ColourChase },
+    ],
+  }
+  },
+  {
+    id: "jgf",
+    title: "Joburg Games Fest",
+    desc: "Boredom Buster is a game app designed for children to help them decide which games to play. I designed the UI, with a focus on making the interface both readable and intriguing for young audiences, ensuring an engaging and child-friendly experience.",
+    hasDetail: true,
+    image: JGFLogo,
+   links:{
+      social: "https://github.com/spacegirl298/nextgen_wealth_studio",
+    },
+    detail:{
+    screenshots: [
+      { label: "Activity Screen", image: BrbActivity },
+      { label: "Background", image: BrBBack },
+      { label: "Door Scene", image: BrbDoor },
+      { label: "Main Screen", image: BoredomBusters },
+    ],
+  }
+  },
+
+  {
+    id: "pms",
+    title: "Press Start Mzansi",
+    desc: "Boredom Buster is a game app designed for children to help them decide which games to play. I designed the UI, with a focus on making the interface both readable and intriguing for young audiences, ensuring an engaging and child-friendly experience.",
+    hasDetail: true,
+    image: PSMLogo,
+   links:{
+      social: "https://github.com/spacegirl298/nextgen_wealth_studio",
+    },
+    detail:{
+    screenshots: [
+      { label: "Activity Screen", image: BrbActivity },
+      { label: "Background", image: BrBBack },
+      { label: "Door Scene", image: BrbDoor },
+      { label: "Main Screen", image: BoredomBusters },
+    ],
+  }
   },
 ];

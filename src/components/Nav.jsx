@@ -25,7 +25,7 @@ export default function Nav({ currentPage, currentSub, navigate }) {
     { key: "gameui",    label: "Game UI" },
     { key: "logo",      label: "Logo Design" },
     { key: "drawings",  label: "Digital Drawings" },
-    { key: "social media", label: "Social Media"},
+    { key: "socialmedia", label: "Social Media"},
   ];
 
   const isPortfolioActive = currentPage === "portfolio" || currentPage === "website-detail" || currentPage === "game-detail";

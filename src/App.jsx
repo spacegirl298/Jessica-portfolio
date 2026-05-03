@@ -13,14 +13,11 @@ import GameDetailPage  from "./pages/GameDetailPage";
 import LogoPage        from "./pages/LogoPage";
 import DrawingsPage    from "./pages/DrawingsPage";
 import SocialMediaPage from "./pages/SocialMediaPage";
+import SocialDetailPage from "./pages/SocialDetailPage"
 
 import "./styles/global.css";
 
 export default function App() {
-  // currentPage: "home" | "about" | "contact" | "cv"
-  //              "portfolio"  (sub: "websites" | "gameui" | "logo" | "drawings")
-  //              "website-detail" (sub: site id)
-  //              "game-detail"    (sub: game id)
   const [currentPage, setCurrentPage] = useState("home");
   const [currentSub,  setCurrentSub]  = useState(null);
 
@@ -54,7 +51,7 @@ export default function App() {
           case "gameui":    return <GameUIPage   navigate={navigate} />;
           case "logo":      return <LogoPage />;
           case "drawings":  return <DrawingsPage />;
-          case "social media": return <SocialMediaPage/>;
+          case "socialmedia": return <SocialMediaPage/>;
           default:          return <WebsitesPage navigate={navigate} />;
         }
 
@@ -63,7 +60,9 @@ export default function App() {
 
       case "game-detail":
         return <GameDetailPage gameId={currentSub} navigate={navigate} />;
-
+        
+        case "social-detail":
+        return <SocialDetailPage gameId={currentSub} navigate={navigate} />;
       default:
         return <HomePage navigate={navigate} />;
     }
