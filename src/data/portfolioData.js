@@ -177,6 +177,11 @@ export const websites = [
         { label: "Simulation PVR", image: SimulationPVR },
         { label: "Banking DNA", image: BankingDNA },
       ],
+      details:[
+        "Role: Front-end Developer",
+        "Project Type: Financial Advisor Web Application (In Progress)",
+        "Industry: Finance",
+       ],
 
       wireframes: [
         { label: "Home Wireframe", image: HomeWireframe },
@@ -294,6 +299,12 @@ export const websites = [
         { label: "Contact Us Desktop", image: SDSContactD },
         { label: "Contact Us Mobile", image: SDSContactM },
       ],
+        details:[
+        "Role: Front-end Developer",
+        "Project Type: Gaming Studio (Complete)",
+        "Industry: Indie Games",
+       ],
+
 
       executiveSummary:
         "Safe Dollar Studios creates a wide range of games — from action-packed adventures to satisfying cleaning games — always striving to deliver playful experiences with fresh mechanics. The studio targets younger audiences who can enjoy games alongside their friends or parents. This website exists to highlight the studio's work, their journey, what they stand for, and the team behind it all. The company needed a dedicated space to showcase their portfolio, share their story, and give people a way to get in touch.",
@@ -364,6 +375,8 @@ export const websites = [
     },
 
     detail: {
+      
+
       wireframes: [
         { label: "Sign Up Desktop", image: HabSignD },
         { label: "Sign Up Mobile", image: HabSignM },
@@ -373,8 +386,6 @@ export const websites = [
         { label: "Log in Mobile", image: HabLogM },
         { label: "Forgot Password Desktop", image: HabForgotD },
         { label: "Forgot Password Mobile", image: HabForgotM },
-        { label: "Confirmation Code Desktop", image: HabConfirmationD },
-        { label: "Confirmation Code Mobile", image: HabConfirmationM },
         { label: "Home Desktop", image: HabHomeD },
         { label: "Home Mobile", image: HabHomeM },
         { label: "Vapes Selection Desktop", image: HabVapesD },
@@ -396,60 +407,118 @@ export const websites = [
         { label: "Orders Desktop", image: HabOrdersD },
         { label: "Orders Mobile", image: HabOrdersM },
       ],
-
+       details:[
+        "Role: Front-end Developer",
+        "Project Type: E-Commerce Website (In Development)",
+        "Industry: Wholesale Vape Distrubition",
+       ],
+      
       executiveSummary:
-        "Safe Dollar Studios creates a wide range of games — from action-packed adventures to satisfying cleaning games — always striving to deliver playful experiences with fresh mechanics. The studio targets younger audiences who can enjoy games alongside their friends or parents. This website exists to highlight the studio's work, their journey, what they stand for, and the team behind it all. The company needed a dedicated space to showcase their portfolio, share their story, and give people a way to get in touch.",
+        "Habibi Vapes is a wholesale vape distributor transitioning from a verbal, relationship-based sales model to a digital-first operation. The company required a distinctive, user-friendly website that would enable seamless online purchasing while standing out in a competitive market.",
 
       keySections: [
-        "Home — introduction to the studio",
-        "Games Overview — A showcase of all the studio's games, each with a link to play",
-        "Games Individual — In-depth information per game, including screenshots and a link to the itch.io page",
-        "About Us — The studio's story, mission, values, and awards",
-        "Team — An overview of the team and their individual roles",
-        "Contact Us — Access to all social links and a direct email form",
+        "Log In – users log into the page",
+        "Forgot Password – users reset their passwords",
+        "Sign Up – users create an account",
+        "Confirmation Code – users enter their confirmation code sent via email",
+        "Home – introduction to the page",
+        "Vapes Selection – showcases all vapes by brand",
+        "Vapes Detail – details about individual vapes",
+        "Profile – user profile page",
+        "Contact – page for wholesale opportunities",
+        "Edit Profile – users edit their profile details",
+        "Cart – cart of products users want to purchase",
+        "Wishlist – space for products users wish to purchase",
+        "Checkout – space to checkout products",
       ],
 
       successCriteria: [
-        "Users can discover and access the studio's games and information",
-        "Users are motivated to play the games or contact the studio",
-        "Users can easily reach out to the studio through multiple channels",
+        "Customers can discover, select, and purchase products with minimal friction",
+        "The user experience encourages repeat purchases and brand loyalty",
+        "The platform provides a safe, reliable environment for transactions and data storage",
       ],
 
       customerBackground:
-        "People interested in indie games often don't have easy access to the studio's work or enough information to learn more about who made it. They need a space to explore the games and understand the studio before deciding to play.",
+        "Users need a space to purchase vape products from home and have them delivered.",
 
       challenges: [
-        "No existing space to showcase the studio's portfolio or share their story",
-        "No central point of contact for players or collaborators",
+        "Having to leave the house to order products",
+        "Overwhelming vape websites with too much information",
+        "Difficulty navigating websites",
       ],
 
-      mood: "The company's brand identity is built around creativity and playfulness, and the website is designed to reflect that. Interactive elements keep users engaged and intrigued as they explore. The colour palette is crafted to feel distinctive yet approachable — bold enough to stand out, warm enough to welcome. Orange is the primary accent colour: eye-catching and energetic, it communicates the studio's playful and creative spirit while maintaining a sense of professionalism.",
+      goals:[
+        "Develop pages for users to easily purchase products",
+        "Display all company products",
+        "Develop a reliable website that protects user information",
+      ],
 
+      mood: "The interface draws users in and encourages return visits through ease of use. Black, purple, pink, and blue work together to balance elegance with a creative touch. Black conveys professionalism and authority, while purple, pink, and blue add a vibrant touch. The clients requested a simplistic yet creative look.",
       features: [
+        {
+          title: "Log In",
+          description:
+            "Simple design for users to enter username and password. Easy access to forgot password.",
+        },
+        {
+          title: "Forgot Password",
+          description:
+            "Space for users to create a new password by entering email or username to receive a reset email.",
+        },
+            {
+          title: "Sign Up",
+          description:
+            "Space for users to create an account by entering full name, username, email address, and password. Users are then sent to the confirmation code page.",
+        },
+        {
+          title: "Confirmation Code",
+          description:
+            "Space for users to enter the code received via email to confirm their account. Users are then sent to the log in page.",
+        },
         {
           title: "Home",
           description:
-            "The home page introduces users to the studio before they explore further. It features an image carousel showcasing the team, giving visitors a personal, human first impression of the people behind the games.",
+            "Space for users to access all brands the company sells, with a list of highly rated products to aid decision-making.",
         },
         {
-          title: "Games Overview",
+          title: "Vapes Selection",
           description:
-            "This page was designed to give users access to all of the studio's games, with the understanding that many more titles will be added over time. A search function allows users to quickly find a specific game they're looking for, keeping navigation simple as the library grows.",
+            "Each brand has its own page showcasing all products, categorized by puff count. A hamburger menu takes users to each puff count section. Under each product is an add to cart button that takes users to the product detail page.",
         },
         {
-          title: "Games Indidvidual",
+          title: "Vape Details",
           description:
-            "Each game has its own dedicated page featuring a description of the game, screenshots, and a direct link to the itch.io page where users can download and play it.",
+            " Each product has a detail page with an image and description including product details, flavors, and features. Users can toggle quantity and add products to cart or wishlist.",
+        },
+            {
+          title: "Profile",
+          description:
+            "Showcases user information including email address, contact number, address, name, and description. Users can edit their profile information.",
         },
         {
-          title: "Team",
+          title: "Edit Profile",
           description:
-            "The Team page is designed to give recognition to every member of the studio. It reuses the same image carousel component as the homepage, reinforcing design consistency across the site. Each team member's card flips on hover to reveal their role and a short bio.",
+            "A popup screen that appears when users click edit profile. Users can update their personal information, which is reflected on their profile and checkout information.",
         },
         {
-          title: "Contact Us",
+          title: "Contact",
           description:
-            "The Contact page provides multiple ways for users to connect with the studio. Social media links invite visitors to explore the studio's more casual, creative side through their online channels. A contact form lets users fill in their details and send a direct message to the studio — a simple and efficient way to get in touch.",
+            "Provides details of Habibi Vapes wholesale options for retailers. Includes email address, phone number, and working hours. Users can input their information and send an email directly to the company.",
+        },
+        {
+          title: "Cart",
+          description:
+          "Showcases all products users want to purchase, including product details, price, and quantity. Users can delete products. Showcases cart total and allows users to proceed to checkout.",
+        },
+        {
+          title: "Wishlist",
+          description:
+          "Space for users to view products they have added to their wishlist, including product, price, quantity, and total. Users can remove products, add products to cart, add all products to cart, or clear their wishlist.",
+        },
+        {
+          title: "Checkout",
+          description:
+          "Space for users to checkout products they want to purchase. Showcases shipping costs with total product price. Includes fields for credit or debit card details. Users can then complete their payment.",
         },
       ],
     },
@@ -457,14 +526,15 @@ export const websites = [
   {
     id: "med",
     title: "Now Med Website",
-    desc: "Habibi Vapes is a vape retail company whose website is designed to sell products directly to customers. The site showcases the full range of available vapes, allowing visitors to browse different options and make purchases seamlessly online.",
+    desc: "Now Med is a web application desifned to improve transparency and accountability within medical appointmnet systems. The application focuses on improving communication between patients and reception staff by providing real-time updates about appoinmnet schedules and delays.",
     image: NowMedImg,
     hasDetail: true,
-    links: {
-      figma:
-        "https://www.figma.com/design/OWh0w4qioDyJxeOcg4BKL8/Habibi-Vapes?node-id=55-1636&t=NhKkXVZfan0GTy8T-1",
-    },
-
+   
+    details:[
+        "Role: Front-end Developer",
+        "Project Type: Health Care Web Application (In Development)",
+        "Industry: Health Care",
+       ],
     detail: {
       wireframes: [
         { label: "Log in Mobile", image: MedLogM },
@@ -481,65 +551,113 @@ export const websites = [
         { label: "Secretary Dashboard Desktop", image: MedSecretaryD },
         { label: "Patient Book Appointment Mobile", image: MedBookM },
         { label: "Patient Select Appointment Time Mobile", image: MedTimeM },
-        { label: "Patient Confirm Booking Mobile", image: MedBookM },
+        { label: "Patient Confirm Booking Mobile", image: MedConfirmM },
         { label: "Patient Booking Confirmed Mobile", image: MedConfirmBookM },
         { label: "Notifications Mobile", image: MedNotificationM },
         { label: "Delay Mobile", image: MedDelayM },
       ],
 
       executiveSummary:
-        "Safe Dollar Studios creates a wide range of games — from action-packed adventures to satisfying cleaning games — always striving to deliver playful experiences with fresh mechanics. The studio targets younger audiences who can enjoy games alongside their friends or parents. This website exists to highlight the studio's work, their journey, what they stand for, and the team behind it all. The company needed a dedicated space to showcase their portfolio, share their story, and give people a way to get in touch.",
+        "Now Med is designed to improve transparency and accountability within medical appointment systems. The application focuses on improving communication between patients and reception staff by providing real-time updates about appointment schedules and delays. Many medical practices still rely on manual scheduling systems or static booking platforms, which often fail to communicate schedule changes effectively. As a result, patients frequently experience long waiting times, uncertainty about appointment status, and difficulty coordinating their schedules around healthcare visits. The Now Med system addresses this issue by providing a centralized interface that allows patients and medical staff to view appointment schedules, receive delay notifications, and manage bookings through a simple digital interface.",
 
       keySections: [
-        "Home — introduction to the studio",
-        "Games Overview — A showcase of all the studio's games, each with a link to play",
-        "Games Individual — In-depth information per game, including screenshots and a link to the itch.io page",
-        "About Us — The studio's story, mission, values, and awards",
-        "Team — An overview of the team and their individual roles",
-        "Contact Us — Access to all social links and a direct email form",
+        "Log In – allow patients and secretaries to log into their dedicated dashboards",
+        "Patient Sign Up – allow patients to register an account",
+        "Secretary Sign Up – allow secretaries to register an account",
+        "Verification Email – allow users to verify their emails during registration",
+        "Patient Dashboard – an overview of the patient's appointments and records",
+        "Calendar – patient's calendar view",
+        "Records – patient's medical records",
+        "Secretary Dashboard – overview of daily operations for secretaries",
+        "Patients – overview of all patients (secretary view)",
+        "Records – overview of all records (secretary view)",
+        "Patient Book Appointment – allow patient to book appointment on specific date",
+        "Patient Select Appointment Time – patient books appointment at specific time",
+            "Patient Confirm Booking – confirm booking",
+        "Patient Booking Confirmed – record of patient booking confirmed",
+        "Notifications – secretary and patient notifications",
+        "Secretary Delay – secretary creates delay in schedule",
       ],
 
       successCriteria: [
-        "Users can discover and access the studio's games and information",
-        "Users are motivated to play the games or contact the studio",
-        "Users can easily reach out to the studio through multiple channels",
+        "Users can view appointment schedules and clearly see delay updates in the interface",
+        "The interface allows users to easily book, modify, or cancel appointments",
+        "Test users can check appointment status in under 5 seconds",
+        "The system successfully demonstrates real-time delay updates within the interface",
       ],
 
       customerBackground:
-        "People interested in indie games often don't have easy access to the studio's work or enough information to learn more about who made it. They need a space to explore the games and understand the studio before deciding to play.",
+        "One of the most common frustrations in healthcare systems is the lack of transparency surrounding appointment schedules and delays. Patients often arrive at clinics on schedule but experience long and unpredictable wait times due to delayed consultations, overlapping appointments, or emergency cases.",
 
       challenges: [
-        "No existing space to showcase the studio's portfolio or share their story",
-        "No central point of contact for players or collaborators",
+        "Long waiting times after arriving for scheduled appointments",
+        "No communication when doctors are running late",
+        "Difficulty confirming appointment status wihtout calling reception",
+        "Disruption to work schedules, meetings, or academic commitments",
       ],
 
-      mood: "The company's brand identity is built around creativity and playfulness, and the website is designed to reflect that. Interactive elements keep users engaged and intrigued as they explore. The colour palette is crafted to feel distinctive yet approachable — bold enough to stand out, warm enough to welcome. Orange is the primary accent colour: eye-catching and energetic, it communicates the studio's playful and creative spirit while maintaining a sense of professionalism.",
+      mood: "The interface design centers on warmth, clarity, and accessibility. While healthcare applications have historically defaulted to cold, clinical aesthetics, Now Med makes a deliberate departure from this convention by using a rose-based color palette to communicate that medical care is a deeply human experience. Every visual decision is made in service of reducing cognitive load and building user confidence.",
 
       features: [
         {
-          title: "Home",
+          title: "Log In",
           description:
-            "The home page introduces users to the studio before they explore further. It features an image carousel showcasing the team, giving visitors a personal, human first impression of the people behind the games.",
+          "Users can securely log in and reset their passwords. Users must log in using their registered email and password. The system redirects the user to their role-specific dashboard after login",
         },
         {
-          title: "Games Overview",
-          description:
-            "This page was designed to give users access to all of the studio's games, with the understanding that many more titles will be added over time. A search function allows users to quickly find a specific game they're looking for, keeping navigation simple as the library grows.",
+          title: "Patient Sign Up",
+          description: 
+          "Users register for an account by selecting 'patient' and filling in their personal information",
+
         },
         {
-          title: "Games Indidvidual",
-          description:
-            "Each game has its own dedicated page featuring a description of the game, screenshots, and a direct link to the itch.io page where users can download and play it.",
+          title: "Secretary Sign Up",
+          description: 
+          "Users register for an account by selecting 'secretary' and filling in their full name, email address, valid practice code. A staff verification box is unchecked by default to confirm authorization.",
         },
         {
-          title: "Team",
-          description:
-            "The Team page is designed to give recognition to every member of the studio. It reuses the same image carousel component as the homepage, reinforcing design consistency across the site. Each team member's card flips on hover to reveal their role and a short bio.",
+          title: "Verification Email",
+          description: 
+          "Once a user completes the registration form, the system sends a unique verificatopm code to the provided email address. Users input the verification code within the web application to activate their account",
         },
         {
-          title: "Contact Us",
+          title: "Patient Dashboard",
+          description: "Displays the number of upcoming appointments and a list of upcoming appointments including: date, time, doctor practice, appointment type, and status. Also showcases the number of medical records the patient has, with the title and dates of recent records.",
+        },
+        {
+          title: "Calendar",
           description:
-            "The Contact page provides multiple ways for users to connect with the studio. Social media links invite visitors to explore the studio's more casual, creative side through their online channels. A contact form lets users fill in their details and send a direct message to the studio — a simple and efficient way to get in touch.",
+          "A display of the doctor's calendar clearly showing available time slots and booked slots. Displays all of the patient's appointments. Users can book appointments on available slots. The calendar shows real-time updates from any changes the secretary has uploaded.",
+        },
+        {
+          title: "Records",
+          description: 
+          "A list of documents associated only with the logged-in patient. Patients can open and view individual records.",
+        },
+        {
+          title: "Secretary Dashboard",
+          description: 
+          "An overview of daily operations. Displays a daily schedule of all appointments, the total number of appointments for the day, the number of delayed appointments, and the number of confirmed appointments. Includes a calendar displaying all booked appointments where secretaries can mark specific dates and time slots as unavailable. Features real-time updates of any patient bookings or cancellations.",
+        },
+        {
+          title: "Patients (Secretary View",
+          description: "Secretaries have a full list of all patients and can click on a patient's profile to access all their information. Users have the ability to search for a specific patient.",
+        },
+        {
+          title: "Records (Secretary View)",
+          description: "Individual patient medical records displaying all their medical information.",
+        },
+        {
+          title: "Patient Book Appointment",
+          description: "Patients can book an appointment by providing the date and time, the practice, and the appointment type.",
+        },
+        {
+          title: "Notifications",
+          description: "Alerts for any appointments, cancellations, or delay updates for both patients and secretaries.",
+        },
+        {
+          title: "Secretary Delay",
+          description: "Users can input delays for any patient appointments. This triggers a real-time update to the patient's page and sends a notification of the delay.",
         },
       ],
     },

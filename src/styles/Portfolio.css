@@ -750,3 +750,237 @@
 .logo-img--clickable:hover .logo-hover-hint {
   opacity: 1;
 }
+/* ══════════════════════════════════════════════
+   REDESIGNED DETAIL PAGE — EDITORIAL LAYOUT
+   ══════════════════════════════════════════════ */
+
+/* Section wrapper with top rule */
+.detail-section {
+  margin-top: 56px;
+}
+
+.detail-section:first-child {
+  margin-top: 8px;
+}
+
+/* Numbered eyebrow + title row */
+.section-label-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.section-eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* Override the old standalone title so it fits the new row */
+.section-label-row .detail-section-title {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+  flex: 1;
+}
+
+/* ── OVERVIEW SUMMARY BLOCK ── */
+.overview-summary-block {
+  border-left: 2px solid var(--gold);
+  padding: 16px 24px;
+  margin-bottom: 32px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.overview-summary-text {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ── OVERVIEW COLUMNS (Key Sections / Success Criteria) ── */
+.overview-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.overview-col-heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 14px;
+}
+
+.overview-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overview-list li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.list-bullet {
+  color: var(--gold);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ── MOOD PULL QUOTE ── */
+.mood-quote {
+  margin: 0 0 32px;
+  padding: 24px 28px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  background: rgba(255, 255, 255, 0.02);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--text);
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mood-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-style: normal;
+  opacity: 0.8;
+}
+
+/* ── DESIGN COLS ── */
+.design-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.design-col-heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 10px;
+}
+
+.design-col-body {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ── FEATURES GRID ── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.feature-card {
+  background: var(--bg, #0a0a0a);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.2s ease;
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.feature-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+.feature-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 0;
+}
+
+.feature-card-body {
+  font-size: 0.81rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  .overview-cols,
+  .design-cols,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-label-row {
+    gap: 10px;
+  }
+
+  .overview-summary-block {
+    padding: 12px 16px;
+  }
+
+  .mood-quote {
+    padding: 18px 20px;
+  }
+}
+
+/* ── KEY SECTIONS FULL-WIDTH BLOCK (below overview cols) ── */
+.key-sections-block {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.key-sections-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 8px 32px;
+}
+
+.key-sections-list li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text);
+}
