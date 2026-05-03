@@ -267,3 +267,73 @@ body {
   .divider { margin: 0 16px; }
   .back-btn { margin: 16px 20px; }
 }
+
+/* Add to your ./styles/global.css */
+
+.btt-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999; /* Ensure it's above everything */
+}
+
+.btt-btn--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btt-btn:hover {
+  transform: scale(1.1);
+  background: var(--gold-lt);
+}
+
+.btt-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.btt-ring-track {
+  stroke: var(--border);
+}
+
+.btt-ring-progress {
+  stroke: var(--bg);
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.btt-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Optional: Adjust position on mobile */
+@media (max-width: 768px) {
+  .btt-btn {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .btt-arrow {
+    font-size: 18px;
+  }
+}

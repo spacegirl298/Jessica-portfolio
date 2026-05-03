@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import BackToTop from "./components/BackToTop";
 import Nav from "./components/Nav";
 
 // Pages
@@ -76,6 +77,7 @@ export default function App() {
         navigate={navigate}
       />
       <main>{renderPage()}</main>
+      <BackToTop /> {/* 👈 Add this line */}
     </>
   );
 }
