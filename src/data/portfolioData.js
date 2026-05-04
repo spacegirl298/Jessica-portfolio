@@ -669,15 +669,31 @@ export const gameUIs = [
     title: "Broken Bonds",
     desc: "Broken Bonds is a narrative-driven game where players step into the stitched shoes of a once-beloved teddy bear, torn from its rightful owner by a troubled brother and locked away in a room that feels more like a prison. I designed the assets and UI for this project.",
     image: BrokenImg,
-    detail:
-      "A dark narrative game with a melancholic, hand-crafted aesthetic. The UI uses stitched textures, aged paper tones, and a limited palette to reinforce the emotional weight of the story. Every element was designed to feel worn and loved, mirroring the protagonist's own journey.",
-
+    hasDetail: true,
+    links: {
+      game: "https://jessica-jardim.itch.io/broken-bonds",
+    },
+   detail:{
     screenshots: [
       { label: "Main Menu", image: BBComplete },
       { label: "Controller UI", image: BBController },
       { label: "Keyboard UI", image: BBKeyboard },
       { label: "Broken Bonds Scene", image: BrokenBonds },
     ],
+    details: [
+      "Role: UI Designer",
+      "Project Type: 3D Narrative Game (Complete)",
+    ],
+    executiveSummary:
+    "",
+    keySections: [],
+
+    userFlow: [],
+    playerBackground:[],
+    goals:[],
+    mood:[],
+    features:[],
+  },
   },
 
   {
